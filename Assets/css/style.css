@@ -1,0 +1,100 @@
+/* //$color-primary: #0091ea;
+$color-primary-light:#64b5f6;
+$color-primary-dark: #37474f; */
+
+html {
+    font-size:62.5%;
+    font-family: "Roboto Slab",serif;
+}
+
+.section-head{
+    position:relative;
+    background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
+    background-size: cover;
+    height: 70vh;
+    color:white;
+}
+
+.section-head__name {
+    position:absolute;
+    top:0%;
+    left:50%;
+    opacity:0;
+    transform: translate(-50%,-50%) scale(0.8);
+    font-size: 8rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 0rem 0rem 2rem rgba(0,0,0,0.8);
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-name:top_bottom;
+}
+
+@keyframes top_bottom {
+    0%{
+        top:0%;
+        left:50%;
+        opacity:0;
+        transform: translate(-50%,-50%) scale(0.8);
+    }
+    70%{
+        top:30%;
+        left:50%;
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1.1);        
+    }    
+    100%{
+        top:30%;
+        left:50%;
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+.section-head__profession {
+    letter-spacing: 0.5rem;
+    position:absolute;
+    top:90%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.8);   
+    font-size: 4rem; 
+    text-shadow: 0rem 0rem 1rem rgba(0,0,0,0.8);
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-name:bottom_top;    
+}
+
+@keyframes bottom_top {
+    0%{
+        top:90%;
+        left:50%;
+        opacity:0;
+        transform: translate(-50%,-50%) scale(0.8);
+    }
+    70%{
+        top:60%;
+        left:50%;
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1.1);        
+    }       
+    100%{
+        top:60%;
+        left:50%;
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1);        
+    }
+}
+
+.section-head__contact {
+    position: absolute;
+    top:5%;
+    left:3%;
+    font-size: 2rem;
+}
+
+.section-head__contact a,
+.section-head__contact a:link,
+.section-head__contact a:visited,
+.section-head__contact a:link,
+.section-head__contact a:visited {
+    color:white;
+}
