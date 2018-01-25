@@ -64,6 +64,21 @@
                 document.getElementById("about").classList.add("active");
                 document.getElementsByClassName("section-about")[0].classList.add("show");
             },3500);
+
+            const NavItems = document.getElementsByClassName("section-head__nav-item");
+
+            console.log([...NavItems]);
+
+            function ClickHandler (){
+                console.log(this);
+                [...NavItems].forEach(NavItem=>{
+                    NavItem.classList.remove("active");
+                })
+                this.classList.add("active");
+            }
+
+            [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",ClickHandler));
+
         </script>       
     </body>
 </html>
