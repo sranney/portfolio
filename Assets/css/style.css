@@ -36,6 +36,9 @@ html {
         opacity:0;
         transform: translate(-50%,-50%) scale(0.8);
     }
+    65%{
+        transform: translate(-50%,-50%) scale(0.8);
+    }
     70%{
         top:30%;
         left:50%;
@@ -70,6 +73,9 @@ html {
         opacity:0;
         transform: translate(-50%,-50%) scale(0.8);
     }
+    65%{
+        transform: translate(-50%,-50%) scale(0.8);
+    }
     70%{
         top:60%;
         left:50%;
@@ -88,7 +94,12 @@ html {
     position: absolute;
     top:5%;
     left:3%;
+    opacity:0;
     font-size: 2rem;
+    animation-fill-mode: forwards;
+    animation-delay: 2.1s;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
 }
 
 .section-head__contact a,
@@ -97,4 +108,13 @@ html {
 .section-head__contact a:link,
 .section-head__contact a:visited {
     color:white;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
