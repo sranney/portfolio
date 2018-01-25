@@ -9,6 +9,7 @@ $color-primary-dark: #37474f; */
 @import url("animations.css");
 @import url("pictures.css");
 @import url("content.css");
+@import url("tooltip.css");
 
 html {
     font-size:62.5%;

@@ -1,0 +1,46 @@
+.tooltip {
+    position: relative;
+    float:right;
+    margin:30px 60px 0px 0px;
+}
+
+.tooltip .tooltip-content {
+    position: absolute;
+    visibility: hidden;
+    color: #64b5f6;
+    width: 0px;
+    height: 70px;
+    background-color: rgb(55,71,79);
+    font-size: 1.5rem;
+    right: -100%;
+    top: 0%;
+    padding: 5px;
+    transition: all 0.5s;
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+
+.tooltip:hover .tooltip-content{
+    visibility:visible;
+    width: 200px;
+    height:70px;
+}
+
+.tooltip .listen {
+    position: absolute;
+    top:5%;
+    left:95%;
+    opacity:1;
+    font-size: 5rem;
+    transition: all 0.5s;
+    /* animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-duration: 0.5s;
+    animation-name: fadeIn; */
+}
+
+.tooltip:hover .listen {
+    color: rgb(219,34,51);
+    transform: scale(1.1);
+    text-shadow: 0rem 0rem 3rem rgba(219,34,51,0.8);
+}
