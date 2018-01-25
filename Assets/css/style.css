@@ -20,7 +20,7 @@ html {
     top:0%;
     left:50%;
     opacity:0;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: translate(-50%,-50%) scale(0.9);
     font-size: 8rem;
     letter-spacing: 0.3rem;
     text-shadow: 0rem 0rem 2rem rgba(0,0,0,0.8);
@@ -34,13 +34,13 @@ html {
         top:0%;
         left:50%;
         opacity:0;
-        transform: translate(-50%,-50%) scale(0.8);
+        transform: translate(-50%,-50%) scale(0.9);
     }
     30%{
         top:30%;
         left:50%;
         opacity:1;
-        transform: translate(-50%,-50%) scale(0.8);        
+        transform: translate(-50%,-50%) scale(0.9);        
     } 
     70%{
         top:30%;
@@ -67,7 +67,7 @@ html {
     position:absolute;
     top:90%;
     left:50%;
-    transform: translate(-50%,-50%) scale(0.8);   
+    transform: translate(-50%,-50%) scale(0.9);   
     font-size: 4rem; 
     text-shadow: 0rem 0rem 1rem rgba(0,0,0,0.8);
     animation-fill-mode:forwards;
@@ -80,13 +80,13 @@ html {
         top:90%;
         left:50%;
         opacity:0;
-        transform: translate(-50%,-50%) scale(0.8);
+        transform: translate(-50%,-50%) scale(0.9);
     }
     30%{
         top:60%;
         left:50%;
         opacity:1;
-        transform: translate(-50%,-50%) scale(0.8);        
+        transform: translate(-50%,-50%) scale(0.9);        
     }       
     70%{
         top:60%;
