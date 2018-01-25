@@ -1,0 +1,19 @@
+.section-about{
+    margin:2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-150%);
+
+    box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
+    transition: all 1.5s;
+}
+
+.section-about p{
+    text-align: left;
+    margin: 25px;
+}
+
+.section-about p:last-child{
+    padding: 15px;
+}
+
