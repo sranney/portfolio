@@ -1,0 +1,13 @@
+.btn.btn-toggle{
+    font-size: 2rem;
+    color: #fdd835;
+    background-color: rgba(55,71,79,.7);
+    padding: 3rem;
+    border-radius:5px;
+    transition: all 0.3s;
+}
+
+.btn.btn-toggle:hover{
+    color: #64b5f6;
+    text-shadow: 0rem 0rem 2rem rgba(100,181,246,0.4)
+}

@@ -5,11 +5,17 @@ $color-primary-dark: #37474f; */
 @import url("header.css");
 @import url("titles.css");
 @import url("footer.css");
-@import url("about.css");
-@import url("animations.css");
 @import url("pictures.css");
+
 @import url("content.css");
 @import url("tooltip.css");
+@import url("carousel.css");
+@import url("buttons.css");
+
+@import url("about.css");
+@import url("skills.css");
+
+@import url("animations.css");
 
 html {
     font-size:62.5%;
@@ -18,6 +24,7 @@ html {
 
 body {
     margin:20px;
+    position: relative;
 }
 
 body::-webkit-scrollbar-track

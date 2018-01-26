@@ -58,26 +58,142 @@
                 <p class="word-content">I always strive to give my best effort to the people who hire me. I do this out of respect for them, and out of respect for the work that I am blessed to have been given.  I give time to contribute to my work place in every circumstance that I know I can help co-workers improve technical skills.  Ever since my undergraduate studies, I have gained a reputation as someone to go to for help in studies.  I have also tutored in mathematics and most recently web development.  My passion for web development and sharing knowledge have most recently led me to come back to SMU as a teaching assistant for the the bootcamp I graduated from.</p>
             </p>              
             </section>
+            <section class="section-skills">
+                <h3 class="btn btn-toggle carousel">Carousel</h3>
+                <h3 class="btn btn-toggle table">Table</h3>
+                <h2 class="heading-main">
+                    Some of My Skills
+                </h2><br>
+
+                <div class="section-skills__carousel">
+                    <div class="section-skills__carousel-row carousel-active">
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-mongodb-plain"></i>
+                            <h3 class="skill_title">MongoDB</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-express-original"></i>
+                            <h3 class="skill_title">Express</h3>
+                        </div>                   
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-react-original"></i>
+                            <h3 class="skill_title">React</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-nodejs-plain"></i>
+                            <h3 class="skill_title">Node.js</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-bootstrap-plain"></i>
+                            <h3 class="skill_title">Bootstrap</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-css3-plain"></i>
+                            <h3 class="skill_title">CSS3</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-javascript-plain"></i>
+                            <h3 class="skill_title">JavaScript</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-mysql-plain"></i>
+                            <h3 class="skill_title">MySQL</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-sass-original"></i>
+                            <h3 class="skill_title">SASS</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-sequelize-plain"></i>
+                            <h3 class="skill_title">Sequelize</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-plug"></i>
+                            <h3 class="skill_title">Web Sockets</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-amazonwebservices-original"></i>
+                            <h3 class="skill_title">AWS</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-heroku-original"></i>
+                            <h3 class="skill_title">Heroku</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-google-plain"></i>
+                            <h3 class="skill_title">Google APIs</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-cogs"></i>
+                            <h3 class="skill_title">Web Automation</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-lock"></i>
+                            <h3 class="skill_title">Authentication</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-cloud"></i>
+                            <h3 class="skill_title">Google Cloud Platform</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon icofont icofont-robot-face"></i>
+                            <h3 class="skill_title">DialogFlow AI</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-microphone"></i>
+                            <h3 class="skill_title">Web Speech API</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-map-marker"></i>
+                            <h3 class="skill_title">Geolocation</h3>
+                        </div>
+                    </div>
+    
+            </section>
         </main>
         <script>
             setTimeout(() => {
                 document.getElementById("about").classList.add("active");
-                document.getElementsByClassName("section-about")[0].classList.add("show");
+                document.getElementsByClassName("section-about")[0].classList.add("show_horizontal");
             },3500);
 
             const NavItems = document.getElementsByClassName("section-head__nav-item");
+            const Sections = document.querySelectorAll("section");
 
-            console.log([...NavItems]);
+            [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",NavClickHandler));
 
-            function ClickHandler (){
-                console.log(this);
+            function NavClickHandler (){
                 [...NavItems].forEach(NavItem=>{
                     NavItem.classList.remove("active");
                 })
                 this.classList.add("active");
+                const title = this.textContent.trim().replace(" ","");
+                [...Sections].forEach(Section=>{
+                        if(Section.textContent.indexOf(title)===-1){
+                            Section.classList.remove("show_horizontal");
+                        }
+                    });
+
+                document.getElementsByClassName("section-"+title.toLowerCase())[0].classList.add("show_horizontal");
             }
 
-            [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",ClickHandler));
+            const ToggleButtons = document.getElementsByClassName("btn-toggle");
+            const Carousel = document.getElementsByClassName("section-skills__carousel-row")[0];
+            [...ToggleButtons].forEach(ToggleButton=>ToggleButton.addEventListener("click",ButtonClickHandler));
+
+            function ButtonClickHandler() {
+                if(this.classList.contains("carousel")){
+                    if(!Carousel.classList.contains("carousel-active")){
+                        Carousel.classList.add("carousel-active");
+                        Carousel.classList.remove("table-active");
+                    } 
+                } else if(this.classList.contains("table")){
+                    if(!Carousel.classList.contains("table-active")){
+                        Carousel.classList.add("table-active");
+                        Carousel.classList.remove("carousel-active");                        
+                    }
+                }
+            }
 
         </script>       
     </body>

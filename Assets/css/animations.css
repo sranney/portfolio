@@ -76,19 +76,41 @@
     }
 }
 
-.show {
-    animation-name:fadeInFromLeft;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+.show_horizontal {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
-@keyframes fadeInFromLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(-150%);        
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0%);        
-    }
+.carousel-active {
+    -webkit-animation: css-carousel 22s linear infinite;
+    -moz-animation: css-carousel 22s linear infinite;
+    -ms-animation: css-carousel 22s linear infinite;
+    animation: css-carousel 22s linear infinite;    
 }
+
+@keyframes css-carousel {
+    0%, 3% {margin-left:0}
+    4%, 7% { margin-left:-38%; }
+    8%, 11% { margin-left:-76%; }  
+    12%, 15% { margin-left:-114%; }    
+    16%, 19% { margin-left:-152%; }    
+    20%, 23% { margin-left:-190%; }    
+    24%, 27% { margin-left:-223%; }    
+    28%, 31% { margin-left:-261%; }    
+    32%, 35% { margin-left:-299%; }
+    36%, 39% { margin-left:-337%; }    
+    40%, 43% { margin-left:-375%; }    
+    44%, 47% { margin-left:-390%; }    
+    48%, 51% { margin-left:-355%; }    
+    52%, 55% { margin-left:-320%; }    
+    56%, 59% { margin-left:-285%; }
+    60%, 63% { margin-left:-250%; }
+    64%, 67% { margin-left:-215%; }  
+    68%, 71% { margin-left:-180%; }  
+    72%, 75% { margin-left:-145%; }  
+    76%, 79% { margin-left:-115%; }  
+    80%, 83% { margin-left:-80%; }  
+    84%, 87% { margin-left:-40%; }  
+    88%, 100% { margin-left:0%; }  
+}
+

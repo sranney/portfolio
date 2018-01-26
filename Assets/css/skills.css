@@ -1,4 +1,4 @@
-.section-about{
+.section-skills{
     position:absolute;
     background-color:white;
     top: 83vh;
@@ -8,15 +8,23 @@
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
-    z-index: 10;
+    z-index: 1;
+    width: 92%;
+    padding: 4rem;
 }
 
-.section-about p{
-    text-align: left;
-    margin: 25px;
+.section-skills .heading-main{
+    margin-top: 15px;
 }
 
-.section-about p:last-child{
+.section-skills p:last-child{
     padding: 15px;
 }
 
+.table {
+    float:right;
+}
+
+.carousel{
+    float:left;
+}

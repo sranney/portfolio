@@ -1,0 +1,75 @@
+.section-skills__carousel {
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+  
+.section-skills__carousel-row {
+    width:700%;
+    background-image:url(../images/cover.jpeg);
+    background-position:initial;
+    transition: all 0.3s;
+}
+
+.table-active {
+    background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width:100%;
+    height:100%;
+    flex-basis:30%;
+    margin:5% 2% 5% 0%;
+}
+
+.table-active .skill_box {
+    background-color:rgba(207,216,220,0.9);
+    margin:1%;
+    transition:all 0.5s;
+}
+
+.table-active .skill_box:hover {
+    transform: scale(1.03);
+}
+
+
+.section-skills__carousel-row .css-img{
+    display:inline-block;
+}
+.section-skills__carousel-row div{
+    float:left;
+}
+
+.skill_box {
+    width:25rem;
+    height:15rem;
+    margin:1rem;
+    padding:3rem;
+    border-radius: 15px;
+    text-align:center;
+    background-color:rgba(207,216,220,0.45);
+    box-shadow: inset 0rem 0rem 2rem rgba(0,0,0,0.5), 0rem 0rem 2rem rgba(0,0,0,0.5);
+}
+
+.skill_box__icon{
+    font-size: 10rem !important;
+    background-image:linear-gradient(to right,#64b5f6,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display:block;
+}
+
+.skill_title {
+    margin-top: 2rem;
+    font-size:2rem;
+    text-transform:uppercase;
+    font-weight:700;
+    display:inline-block;
+    background-image:linear-gradient(to right,#64b5f6,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing:5px;
+    transition:all 0.5s;
+}
