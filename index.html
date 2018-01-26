@@ -1,12 +1,16 @@
 <html>
     <head>
-        <link rel="stylesheet" href="./Assets/css/reset.css">
-        <link rel="stylesheet" href="./Assets/css/style.css">
+
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
         <link rel="stylesheet" href="./Assets/css/fonts/icofont.css">
         <link rel="stylesheet" href="./Assets/css/fonts/themify-icons.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> <title>Spencer Ranney - Developer</title>   
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="./Assets/css/reset.css">
+        <link rel="stylesheet" href="./Assets/css/style.css">        
+        
+        <title>Spencer Ranney - Developer</title>   
     </head>
     <body>
         <main>
@@ -17,7 +21,7 @@
                 </div>
                 <div class="tooltip">
                     <i class="listen ti-microphone-alt"></i>
-                    <span class="tooltip-content">
+                    <span class="tooltip-content tooltip-content-listening">
                         Click here to voice command this site. <br> Just say the navigation tabs below.
                     </span>
                 </div>
@@ -59,14 +63,24 @@
             </p>              
             </section>
             <section class="section-skills">
-                <h3 class="btn btn-toggle carousel">Carousel</h3>
-                <h3 class="btn btn-toggle table">Table</h3>
+                <div class="tooltip btn btn-toggle carousel">
+                    <h3>Carousel</h3>
+                    <span class="tooltip-content tooltip-content-carouselToggle">
+                        Click here to view skills as carousel
+                    </span>
+                </div>
+                <div class="tooltip btn btn-toggle table">
+                    <h3>Table</h3>
+                    <span class="tooltip-content tooltip-content-carouselToggle">
+                        Click here to view skills as table
+                    </span>
+                </div>
                 <h2 class="heading-main">
                     Some of My Skills
                 </h2><br>
-
+               
                 <div class="section-skills__carousel">
-                    <div class="section-skills__carousel-row carousel-active">
+                    <div class="section-skills__carousel-row">
                         <div class="skill_box">
                             <i class="skill_box__icon devicon-mongodb-plain"></i>
                             <h3 class="skill_title">MongoDB</h3>
@@ -147,8 +161,27 @@
                             <i class="skill_box__icon fa fa-map-marker"></i>
                             <h3 class="skill_title">Geolocation</h3>
                         </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-git-plain"></i>
+                            <h3 class="skill_title">Git</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-jquery-plain"></i>
+                            <h3 class="skill_title">jQuery</h3>
+                        </div>                            
+                        <div class="skill_box">
+                            <i class="skill_box__icon devicon-mocha-plain"></i>
+                            <h3 class="skill_title">Mocha</h3>
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon fa fa-paint-brush"></i>
+                            <h3 class="skill_title">HTML Canvas</h3>
+                        </div>                                                                    
                     </div>
-    
+                </div>
+                <div class="section-skills-linkedin">
+                    <a href="#" class="section-skills-linkedin"><i class="ti-linkedin"></i></a>
+                </div>
             </section>
         </main>
         <script>
@@ -175,6 +208,10 @@
                     });
 
                 document.getElementsByClassName("section-"+title.toLowerCase())[0].classList.add("show_horizontal");
+                title==="Skills" ? 
+                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.add("carousel-active")},1500)
+                    :
+                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.remove("carousel-active")},1500);
             }
 
             const ToggleButtons = document.getElementsByClassName("btn-toggle");

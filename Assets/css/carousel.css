@@ -2,15 +2,16 @@
     width:100%;
     position:relative;
     overflow:hidden;
+    margin-bottom: 2rem;
 }
   
 .section-skills__carousel-row {
     width:700%;
     background-image:url(../images/cover.jpeg);
     background-position:initial;
-    transition: all 0.3s;
+    transition: all 3s;
 }
-
+/* for viewing the carousel in grid format */
 .table-active {
     background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
     display:flex;
@@ -18,7 +19,7 @@
     justify-content:space-around;
     width:100%;
     height:100%;
-    flex-basis:30%;
+    flex-basis:29%;
     margin:5% 2% 5% 0%;
 }
 
@@ -26,10 +27,11 @@
     background-color:rgba(207,216,220,0.9);
     margin:1%;
     transition:all 0.5s;
+
 }
 
 .table-active .skill_box:hover {
-    transform: scale(1.03);
+    transform: scale(1.09);
 }
 
 
@@ -66,10 +68,7 @@
     text-transform:uppercase;
     font-weight:700;
     display:inline-block;
-    background-image:linear-gradient(to right,#64b5f6,#37474f);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #90a4ae;
     letter-spacing:5px;
     transition:all 0.5s;
 }

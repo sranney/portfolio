@@ -8,22 +8,38 @@
     position: absolute;
     visibility: hidden;
     color: #64b5f6;
-    width: 0px;
-    height: 70px;
-    background-color: rgba(55,71,79,0.7);
+
     font-size: 1.5rem;
-    right: -100%;
-    top: 0%;
     padding: 5px;
     transition: all 0.5s;
     overflow-x: hidden;
     overflow-y:hidden;
 }
 
-.tooltip:hover .tooltip-content{
+.tooltip .tooltip-content.tooltip-content-listening {
+    right: -100%;
+    top: 0%;
+    width: 0px;
+    height: 70px;
+    background-color: rgba(55,71,79,0.7);    
+}
+
+.tooltip .tooltip-content.tooltip-content-carouselToggle {
+    left:-50%;
+    top: -50%;
+    width:200%;
+    background-color: rgb(55,71,79);
+    opacity: 1;  
+}
+
+.tooltip:hover .tooltip-content.tooltip-content-listening {
     visibility:visible;
     width: 200px;
     height:70px;
+}
+
+.tooltip:hover .tooltip-content.tooltip-content-carouselToggle{
+    visibility:visible;
 }
 
 .tooltip .listen {

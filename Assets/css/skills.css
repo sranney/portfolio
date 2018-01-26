@@ -23,8 +23,31 @@
 
 .table {
     float:right;
+    margin:0px;
 }
 
 .carousel{
     float:left;
+    margin:0px;
+}
+
+.section-skills-linkedin {
+    font-size: 3.5rem;
+}
+
+.section-skills-linkedin a,
+.section-skills-linkedin a:link,
+.section-skills-linkedin a:visited {
+    color:#cfd8dc;
+    text-decoration: none;
+    margin:3px;
+    margin-bottom:2rem;
+}
+
+.section-skills-linkedin a>i{
+    transition:all 0.3s;
+}
+
+.section-skills-linkedin a:hover i{
+    color: #0077b5;
 }
