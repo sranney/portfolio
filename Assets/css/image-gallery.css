@@ -1,0 +1,112 @@
+.image-gallery{
+    width:100%;
+    height:30vh;
+    display:flex;
+    flex-wrap:nowrap;
+    flex-basis:16%;
+    justify-content: space-around;
+}
+.image-gallery .img_container{
+    width:100%;
+    height:58%;
+    opacity:.7;
+    position:relative;
+    transition: all 0.5s;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;                
+}
+.image-gallery .img_container img{
+    width:100%;
+    height:100%;
+}            
+.image-gallery .img_container:nth-child(1){
+    background-image:url("../images/Chatty.PNG");                
+}
+.image-gallery .img_container:nth-child(2){
+    background-image:url("../images/checkers.PNG");               
+}          
+.image-gallery .img_container:nth-child(3){
+    background-image:url("../images/emotionalexplorers.PNG");
+}
+.image-gallery .img_container:nth-child(4){
+    background-image:url("../images/HelpNow.PNG");
+}
+.image-gallery .img_container:nth-child(5){
+    background-image:url("../images/newyorktimes.PNG");
+}          
+.image-gallery .img_container:nth-child(6){
+    background-image:url("../images/techcentral.PNG");
+}
+
+.image-gallery .img_container.focused {
+    width:100%;
+    height:100%;            
+}
+.image-gallery .img_container.out-of-focus {
+    width:10%;
+    height:10%;
+}            
+.image-gallery .img_container:hover {
+    transform: translateY(-30%);
+    margin:15px;
+}
+.image-gallery .img_container.focused:hover {
+    transform: translateY(0%);
+}
+p[class^="caption-"] {
+    color:white;
+    position:absolute;
+    opacity: 0;
+    display:none;
+    transition: all 0.5s;
+}
+
+.image-gallery .img_container p[class^="caption-"]:nth-child(1) {
+    top: 15%;
+}
+.image-gallery .img_container p[class^="caption-"]:nth-child(2) {
+    top: 30%;
+}
+.image-gallery .img_container p[class^="caption-"]:nth-child(3) {
+    top: 45%;
+}            
+.image-gallery .img_container p[class^="caption-"]:nth-child(4) {
+    top: 80%;
+}
+.image-gallery .img_container.focused p[class^="caption-"]{
+    opacity:1;
+    display:block;
+}
+
+.image-gallery .img_container i {
+    position:absolute;
+    top:10%;
+    right:5%;
+    opacity:0;
+    display:none;
+    color:rgb(219,34,51);
+    font-size:3rem;
+}
+
+.image-gallery .img_container.focused i {
+    opacity:1;
+    display:block;
+}
+
+.preChoice {
+    height: 5rem;
+    opacity:0;
+    transform: translateX(-200%);
+    transition:all 0.2s;
+}
+
+.preChoice.in {
+    opacity:1;
+    transform:translateX(0%);
+}
+
+.preChoice.out {
+    opacity:0;
+    transform:translateX(200%);
+}

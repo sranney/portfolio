@@ -76,7 +76,7 @@
                     </span>
                 </div>
                 <h2 class="heading-main">
-                    Some of My Skills
+                    Some Tech I Know
                 </h2><br>
                
                 <div class="section-skills__carousel">
@@ -127,7 +127,7 @@
                         </div>
                         <div class="skill_box">
                             <i class="skill_box__icon devicon-amazonwebservices-original"></i>
-                            <h3 class="skill_title">AWS</h3>
+                            <h3 class="skill_title">Amazon Web Services</h3>
                         </div>
                         <div class="skill_box">
                             <i class="skill_box__icon devicon-heroku-original"></i>
@@ -142,7 +142,7 @@
                             <h3 class="skill_title">Web Automation</h3>
                         </div>
                         <div class="skill_box">
-                            <i class="skill_box__icon fa fa-lock"></i>
+                            <i class="skill_box__icon ti-lock"></i>
                             <h3 class="skill_title">Authentication</h3>
                         </div>
                         <div class="skill_box">
@@ -154,7 +154,7 @@
                             <h3 class="skill_title">DialogFlow AI</h3>
                         </div>
                         <div class="skill_box">
-                            <i class="skill_box__icon fa fa-microphone"></i>
+                            <i class="skill_box__icon icofont icofont-microphone-alt"></i>
                             <h3 class="skill_title">Web Speech API</h3>
                         </div>
                         <div class="skill_box">
@@ -183,13 +183,59 @@
                     <a href="#" class="section-skills-linkedin"><i class="ti-linkedin"></i></a>
                 </div>
             </section>
+            <section class="section-projects">
+                <h2 class="heading-main">
+                    Featured Applications
+                </h2><br>
+                <h3 class="heading-sub preChoice"></h3>
+                <div class="image-gallery">
+                    <div class="img_container" data-project="Chatty, The Chat Bot">
+                        <p class="caption-title">Project Name</p>
+                        <p class="caption-tech">Tech Used</p>
+                        <p class="caption-descr">Project Description</p>
+                        <p class="caption-project-link">Project Link</p>
+                        <p class="caption-github">Project Code</p>               
+                    </div>
+                    <div class="img_container" data-project="Check Your Checkers">                
+                    </div>
+                    <div class="img_container" data-project="Emotional Explorers">              
+                    </div>
+                    <div class="img_container" data-project="Help Now">              
+                    </div>
+                    <div class="img_container" data-project="New York Times Search Engine">              
+                    </div>
+                    <div class="img_container" data-project="Tech Central">               
+                    </div>       
+                </div>
+                <div class="section-projects-github">
+                    <a href="#" class="section-projects-github"><i class="ti-github"></i></a>
+                </div>
+            </section>            
         </main>
         <script>
+
+            window.addEventListener("scroll",(e)=>{
+                console.log(window.scrollY);
+                if(window.scrollY>475){
+                    NavBar.style.position="fixed";
+                    NavBar.style.backgroundImage="linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(./Assets/images/cover.jpeg)";
+                    NavBar.style.backgroundSize="initial";
+                    NavBar.style.top=0;
+                } else if(window.scrollY<475){
+                    NavBar.style.position="absolute";
+                    NavBar.style.top= "90%";
+                    NavBar.style.width= "97.5%";
+                    NavBar.style.backgroundImage="none";
+                }
+            })
+            
+            //SHOWING ABOUT PAGE ON PAGE LOAD
             setTimeout(() => {
                 document.getElementById("about").classList.add("active");
                 document.getElementsByClassName("section-about")[0].classList.add("show_horizontal");
             },3500);
 
+            //NAVIGATION FUNCTIONS
             const NavItems = document.getElementsByClassName("section-head__nav-item");
             const Sections = document.querySelectorAll("section");
 
@@ -209,11 +255,15 @@
 
                 document.getElementsByClassName("section-"+title.toLowerCase())[0].classList.add("show_horizontal");
                 title==="Skills" ? 
-                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.add("carousel-active")},1500)
+                    document.querySelector(".section-skills__carousel-row").classList.contains("table-active") ?
+                        null
+                        :
+                        setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.add("carousel-active")},500)
                     :
-                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.remove("carousel-active")},1500);
+                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.remove("carousel-active")},500);
             }
 
+            //CAROUSEL TOGGLE FUNCTIONS
             const ToggleButtons = document.getElementsByClassName("btn-toggle");
             const Carousel = document.getElementsByClassName("section-skills__carousel-row")[0];
             [...ToggleButtons].forEach(ToggleButton=>ToggleButton.addEventListener("click",ButtonClickHandler));
@@ -231,6 +281,36 @@
                     }
                 }
             }
+            //IMAGE GALLERY FOR PROJECTS
+            const IMGs = document.querySelectorAll(".img_container");
+            const preChoice_title = document.querySelector(".preChoice");
+            [...IMGs].forEach(IMG=>IMG.addEventListener("click",IMGClickListener));
+            [...IMGs].forEach(IMG=>IMG.addEventListener("mouseover",IMGMouseOverListener));
+            [...IMGs].forEach(IMG=>IMG.addEventListener("mouseout",IMGMouseOutListener));
+
+            function IMGClickListener(){
+
+            }
+
+            function IMGMouseOverListener(){
+                const projectName = this.dataset.project;
+                preChoice_title.textContent = projectName;
+                this.style.cursor = "pointer"
+                this.style.opacity = 1;
+                preChoice_title.classList.remove("out");
+                preChoice_title.classList.add("in");
+            }
+
+            function IMGMouseOutListener(){
+                this.style.opacity = 0.7;
+                this.style.cursor = "pointer"
+                preChoice_title.classList.remove("in");
+                preChoice_title.classList.add("out");
+                setTimeout(()=>preChoice_title.classList.remove("out"),250);
+            }
+            
+            const NavBar = document.querySelector(".section-head__nav");
+
 
         </script>       
     </body>

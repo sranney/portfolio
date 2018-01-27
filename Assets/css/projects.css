@@ -1,0 +1,50 @@
+.section-projects{
+    position:absolute;
+    background-color:white;
+    top: 83vh;
+    margin:2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-150%);
+    box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
+    transition: all 1.5s;
+    width: 92%;
+    z-index: 1;
+    padding:4rem;
+    overflow-x:hidden;
+}
+
+.section-projects p{
+    text-align: left;
+    margin: 25px;
+}
+
+.section-projects p:last-child{
+    padding: 15px;
+}
+
+.section-projects-github {
+    font-size: 3.5rem;
+}
+
+.section-projects-github a,
+.section-projects-github a:link,
+.section-projects-github a:visited {
+    color:#cfd8dc;
+    text-decoration: none;
+    margin:3px;
+    margin-bottom:2rem;
+}
+
+.section-projects-github a>i{
+    transition:all 0.3s;
+}
+
+.section-projects-github a:hover{
+    transform: scale(1.2);
+}
+
+.section-projects-github a:hover i{
+    color: #6cc644;
+}
+

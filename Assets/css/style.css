@@ -11,9 +11,12 @@ $color-primary-dark: #37474f; */
 @import url("tooltip.css");
 @import url("carousel.css");
 @import url("buttons.css");
+@import url("image-gallery.css");
+@import url("navigation.css");
 
 @import url("about.css");
 @import url("skills.css");
+@import url("projects.css");
 
 @import url("animations.css");
 

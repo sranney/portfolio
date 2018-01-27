@@ -8,7 +8,7 @@
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
-    z-index: 1;
+    z-index: 10;
     width: 92%;
     padding: 4rem;
 }
@@ -46,6 +46,10 @@
 
 .section-skills-linkedin a>i{
     transition:all 0.3s;
+}
+
+.section-skills-linkedin a:hover {
+    transform: scale(1.2);
 }
 
 .section-skills-linkedin a:hover i{

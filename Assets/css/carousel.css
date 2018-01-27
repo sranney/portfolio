@@ -1,16 +1,14 @@
 .section-skills__carousel {
     width:100%;
-    position:relative;
     overflow:hidden;
     margin-bottom: 2rem;
 }
   
 .section-skills__carousel-row {
     width:700%;
-    background-image:url(../images/cover.jpeg);
-    background-position:initial;
-    transition: all 3s;
+    height:25rem;
 }
+
 /* for viewing the carousel in grid format */
 .table-active {
     background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
@@ -23,21 +21,20 @@
     margin:5% 2% 5% 0%;
 }
 
+.carousel-active .skill_box{
+    margin-top:2rem;
+}
+
 .table-active .skill_box {
-    background-color:rgba(207,216,220,0.9);
+    background-color:rgba(207,216,220,0.8);
     margin:1%;
-    transition:all 0.5s;
-
 }
 
-.table-active .skill_box:hover {
+.skill_box:hover {
     transform: scale(1.09);
+    background-color:rgba(207,216,220,1);
 }
 
-
-.section-skills__carousel-row .css-img{
-    display:inline-block;
-}
 .section-skills__carousel-row div{
     float:left;
 }
@@ -51,6 +48,7 @@
     text-align:center;
     background-color:rgba(207,216,220,0.45);
     box-shadow: inset 0rem 0rem 2rem rgba(0,0,0,0.5), 0rem 0rem 2rem rgba(0,0,0,0.5);
+    transition:all 0.5s;    
 }
 
 .skill_box__icon{
@@ -64,7 +62,7 @@
 
 .skill_title {
     margin-top: 2rem;
-    font-size:2rem;
+    font-size:1.5rem;
     text-transform:uppercase;
     font-weight:700;
     display:inline-block;

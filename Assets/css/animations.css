@@ -89,6 +89,12 @@
     -ms-animation: css-carousel 40s linear infinite;
     animation: css-carousel 40s linear infinite;    
 }
+.carousel-active:hover{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
 /* CAROUSEL ANIMATION - TIMING */
 @keyframes css-carousel {
     0%, 3% {margin-left:0}
@@ -115,4 +121,3 @@
     84%, 87% { margin-left:-44%; }  
     88%, 100% { margin-left:0%; }  
 }
-
