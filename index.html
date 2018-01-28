@@ -16,15 +16,15 @@
         <main>
             <section class="section-head">
                 <div class="section-head__contact">
-                    <a href="#" class="section-head__contact-linkedin"><i class="ti-linkedin"></i></a>
-                    <a href="#" class="section-head__contact-github"><i class="ti-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/spencer-ranney/" class="section-head__contact-linkedin"><i class="ti-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/sranney" class="section-head__contact-github"><i class="ti-github"></i></a>
                 </div>
-                <div class="tooltip">
+                <!-- <div class="tooltip">
                     <i class="listen ti-microphone-alt"></i>
                     <span class="tooltip-content tooltip-content-listening">
                         Click here to voice command this site. <br> Just say the navigation tabs below.
                     </span>
-                </div>
+                </div> -->
                 <h1 class="section-head__name">Spencer Ranney</h1>
                 <h2 class="section-head__profession">Full-Stack Web Developer</h2>
                 <div class="section-head__nav">
@@ -37,7 +37,7 @@
                     <div id="projects" class="section-head__nav-item">
                         Projects
                     </div>
-                    <div id="recs" class="section-head__nav-item">
+                    <div id="recommendations" class="section-head__nav-item">
                         Recommendations
                     </div>                    
                     <div id="contact" class="section-head__nav-item">
@@ -49,9 +49,9 @@
                 <h2 class="heading-main">
                     About Me
                 </h2><br>
-                <h3 class="heading-sub">
-                    Developer | Problem Solver | Educator
-                </h3>><br>
+                <ul class="heading-sub__role-list">
+                    <span class="heading-sub__role">Developer</span> | <span class="heading-sub__role">Problem Solver</span> | <span class="heading-sub__role">Educator</span>
+                </ul><br>
                 <img class="about-pic" src="./Assets/images/me.jpg" alt=""/>
                 <p class="word-content">Hi, my name is Spencer Ranney.  I am a full-stack web developer who lives in Dallas, Texas. Coding, web development, music, and mathematics are my greatest passions. Throughout my educational and professional experiences, my work ethic and discipline, along with my creative problem solving skills have driven me to great accomplishments. Most recently, I graduated at the top of my cohort at SMU Coding Boot Camp. My passion for web development comes from a love of building abstract ideas into functioning full stack applications. I get a lot of enjoyment out of building something completely my own. I am currently a teaching assistant for the SMU Coding Boot Camp.</p>
 
@@ -65,18 +65,18 @@
             <section class="section-skills">
                 <div class="tooltip btn btn-toggle carousel">
                     <h3>Carousel</h3>
-                    <span class="tooltip-content tooltip-content-carouselToggle">
+                    <span class="tooltip-content tooltip-content-top">
                         Click here to view skills as carousel
                     </span>
                 </div>
                 <div class="tooltip btn btn-toggle table">
                     <h3>Table</h3>
-                    <span class="tooltip-content tooltip-content-carouselToggle">
+                    <span class="tooltip-content tooltip-content-top">
                         Click here to view skills as table
                     </span>
                 </div>
                 <h2 class="heading-main">
-                    Some Tech I Know
+                    Some Skills I Offer
                 </h2><br>
                
                 <div class="section-skills__carousel">
@@ -180,138 +180,154 @@
                     </div>
                 </div>
                 <div class="section-skills-linkedin">
-                    <a href="#" class="section-skills-linkedin"><i class="ti-linkedin"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/spencer-ranney/" class="section-skills-linkedin"><i class="ti-linkedin"></i></a>
                 </div>
             </section>
             <section class="section-projects">
+                <div class="section-projects-github">
+                    <a target="_blank" href="https://github.com/sranney" class="section-projects-github"><i class="ti-github"></i></a>
+                </div>                
+                <div class="btn btn-circle tooltip">
+                    <i class="fa fa-question"></i>
+                    <span class="tooltip-content tooltip-content-left">Click an image to see its project specs</span>
+                </div>
                 <h2 class="heading-main">
                     Featured Applications
                 </h2><br>
                 <h3 class="heading-sub preChoice"></h3>
                 <div class="image-gallery">
-                    <div class="img_container" data-project="Chatty, The Chat Bot">
-                        <p class="caption-title">Project Name</p>
-                        <p class="caption-tech">Tech Used</p>
-                        <p class="caption-descr">Project Description</p>
-                        <p class="caption-project-link">Project Link</p>
-                        <p class="caption-github">Project Code</p>               
+                    <div class="img_container" data-project="Chatty, The Chat Bot" data-id="chatty">
                     </div>
-                    <div class="img_container" data-project="Check Your Checkers">                
+                    <div class="img_container" data-project="Check Your Checkers" data-id="check">
                     </div>
-                    <div class="img_container" data-project="Emotional Explorers">              
+                    <div class="img_container" data-project="Emotional Explorers" data-id="emot">
                     </div>
-                    <div class="img_container" data-project="Help Now">              
+                    <div class="img_container" data-project="Help Now" data-id="help">
                     </div>
-                    <div class="img_container" data-project="New York Times Search Engine">              
+                    <div class="img_container" data-project="New York Times Search Engine" data-id="nyt">
                     </div>
-                    <div class="img_container" data-project="Tech Central">               
+                    <div class="img_container" data-project="Tech Central" data-id="tech">
                     </div>       
                 </div>
-                <div class="section-projects-github">
-                    <a href="#" class="section-projects-github"><i class="ti-github"></i></a>
+
+                <div class="section-projects__sheets">
+                    <div class="project-sheet" data-id="chatty">
+                        <h3 class="featured-project-title">Chatty, The Chat Bot</h3>
+                        <img class="featured-project-pic" src="./Assets/images/Chatty.PNG">
+                        <h3 class="heading-sub">Project Description</h3>
+                        <p class="featured-project-descr">A chat bot that you can speak to. Web Speech API transcribes spoken statements by the user, Socket.io sends transcriptions between the client and the server and Dialogflow AI (API.AI) interprets the statements that the server receives from the client and formulate responses. Web Speech API then takes the returned text from Dialogflow and speaks those words. The icon font sets of Themify, Icofonts and Weather Icons are used to enhance the responses from the AI. A Google Cloud Platform function is used to handle webhooks from Dialogflow in order to get the weather.</p>
+                        <h3 class="heading-sub">Technology</h3>
+                        <ul class="featured-project-tech">
+                            <li>Themify, Icofont & Weather Icon Icon Fonts</li>
+                            <li>Web Speech API - Recognition and Synthesis</li>
+                            <li>World Weather Online API</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/socketio.png"/>Socket.io</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/dialogflow.png"/>Dialogflow AI</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/google_cloud_platform.png"/>Google Cloud Platform</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js and Express.js</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://chatty-thechatbot.herokuapp.com/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/sranney/DialogFlow-Chatbot" class="featured-project-button">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-sheet" data-id="check">
+                        <h3 class="featured-project-title">Check Your Checkers</h3>
+                        <img class="featured-project-pic" src="./Assets/images/checkers.PNG">
+                        <h3 class="heading-sub">Project Description</h3>
+                        <p class="featured-project-descr">A MERN full-stack application with a proxy server and Socket.io that enables real-time checkers game play and private chat functionality. React Router Hash Router enables persistent links that do not break on page refresh. Firebase Google Authentication for easy user profile creation. HTML5 Canvas confetti drop overlay on game wins. SendGrid allows for game invitations to be sent through email to friends.</p>
+                        <h3 class="heading-sub">Technology</h3>
+                        <ul class="featured-project-tech">
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/materializecss.png"/>Materialize CSS</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/react.png"/>React.js & React Router</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js and Express.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/socketio.png"/>Socket.io</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/mongodb.png"/>MongoDB & Mongoose</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/firebase.png"/>Firebase Auth & Google Login</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/google_apis.png"/>Google Charts</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/sendgrid.png"/>SendGrid</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://checkyourcheckers.herokuapp.com/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/sranney/checkers" class="featured-project-button">View Code</a>
+                        </div> 
+                    </div>                
+                    <div class="project-sheet" data-id="emot">
+                        <h3 class="featured-project-title">Emotional Explorers</h3>
+                        <img class="featured-project-pic" src="./Assets/images/emotionalexplorers.PNG">
+                        <h3 class="heading-sub">Project Description</h3>
+                        <p class="featured-project-descr">An application to help children with autism emotionally develop. The site has two sides to it. On one side, there are quiz modules with questions for students to answer that are geared towards learning about how they view emotions. On the other side, is an admin portal to facilitate counselors' analysis of an individual student's emotional development.</p>
+                        <h3 class="heading-sub">Technology</h3>
+                        <ul class="featured-project-tech">
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/bootstrap.png"/>Bootstrap</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/handlebars.png"/>Handlebars.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js & Express.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/mysql.png"/><img class="featured-project-tech-pic" src="./Assets/images/sequelize.png"/>MySQL & Sequelize</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/passportjs.png"/>Passport.js & bcrypt</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/aws.png"/>AWS</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://emotionalexplorers.herokuapp.com/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/chairmanmeow13/Project-2-Group-6" class="featured-project-button">View Code</a>
+                        </div> 
+                    </div>
+                    <div class="project-sheet" data-id="help">
+                        <h3 class="featured-project-title">Help Now</h3>
+                        <img class="featured-project-pic" src="./Assets/images/HelpNow.PNG">
+                        <h3 class="heading-sub">Project Description</h3>
+                        <p class="featured-project-descr">An application that connects people that need help with people that can help them. Provides a set of tools for helpers to facilitate their task including private chat with the person they are helping and a map with directions to where they need to help.</p>
+                        <h3 class="heading-sub">Technology</h3>
+                        <ul class="featured-project-tech">
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/bootstrap.png"/>Bootstrap</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/google_apis.png"/><img class="featured-project-tech-pic" src="./Assets/images/facebook.png"/>Google & Facebook Login</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/firebase.png"/>Firebase Auth & Real-Time Database</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/googlemaps.png"/>Google Maps APIs & HTML5 Geolocation</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://sranney.github.io/HelpNow/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/sranney/HelpNow" class="featured-project-button">View Code</a>
+                        </div> 
+                    </div>
+                    <div class="project-sheet" data-id="nyt">
+                        <h3 class="featured-project-title">New York Times Search</h3>
+                        <img class="featured-project-pic" src="./Assets/images/newyorktimes.PNG">
+                        <h3 class="heading-sub">Project Description</h3>                        
+                        <p class="featured-project-descr">A MERN full-stack application with a proxy server that enables users to search for articles using The New York Times API and save them for other users of the site to see. Materialize CSS and React were used for the UI.</p>
+                        <h3 class="heading-sub">Technology</h3>                        
+                        <ul class="featured-project-tech">
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/materializecss.png"/>Materialize CSS</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/react.png"/>React.js</li>
+                            <li>New York Times API</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js and Express.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/mongodb.png"/>MongoDB and Mongoose</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://nyt-r.herokuapp.com/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/sranney/nytreact" class="featured-project-button">View Code</a>
+                        </div> 
+                    </div>
+                    <div class="project-sheet" data-id="tech">
+                        <h3 class="featured-project-title">Tech Central</h3>
+                        <img class="featured-project-pic" src="./Assets/images/techcentral.PNG">
+                        <h3 class="heading-sub">Project Description</h3> 
+                        <p class="featured-project-descr">A Cheerio.js-powered webscraper for gathering technology articles from YCombinator Hacker News and Tech Crunch.  MongoDB allows users to leave persistent comments on articles for others to read as well. Materialize CSS and JS enhance the UI.</p>
+                        <h3 class="heading-sub">Technology</h3>                        
+                        <ul class="featured-project-tech">
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/materializecss.png"/>Materialize CSS</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/handlebars.png"/>Handlebars.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/cheeriojs.svg"/>Cheerio.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js and Express.js</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/mongodb.png"/>MongoDB and Mongoose</li>
+                        </ul>
+                        <div class="featured-projects-links">
+                            <a target="_blank" href="https://calm-brushlands-73713.herokuapp.com/" class="featured-project-button">View Project</a>
+                            <a target="_blank" href="https://github.com/sranney/nytreact" class="featured-project-button">View Code</a>
+                        </div> 
+                    </div>                
                 </div>
+
             </section>            
         </main>
-        <script>
-
-            window.addEventListener("scroll",(e)=>{
-                console.log(window.scrollY);
-                if(window.scrollY>475){
-                    NavBar.style.position="fixed";
-                    NavBar.style.backgroundImage="linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(./Assets/images/cover.jpeg)";
-                    NavBar.style.backgroundSize="initial";
-                    NavBar.style.top=0;
-                } else if(window.scrollY<475){
-                    NavBar.style.position="absolute";
-                    NavBar.style.top= "90%";
-                    NavBar.style.width= "97.5%";
-                    NavBar.style.backgroundImage="none";
-                }
-            })
-            
-            //SHOWING ABOUT PAGE ON PAGE LOAD
-            setTimeout(() => {
-                document.getElementById("about").classList.add("active");
-                document.getElementsByClassName("section-about")[0].classList.add("show_horizontal");
-            },3500);
-
-            //NAVIGATION FUNCTIONS
-            const NavItems = document.getElementsByClassName("section-head__nav-item");
-            const Sections = document.querySelectorAll("section");
-
-            [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",NavClickHandler));
-
-            function NavClickHandler (){
-                [...NavItems].forEach(NavItem=>{
-                    NavItem.classList.remove("active");
-                })
-                this.classList.add("active");
-                const title = this.textContent.trim().replace(" ","");
-                [...Sections].forEach(Section=>{
-                        if(Section.textContent.indexOf(title)===-1){
-                            Section.classList.remove("show_horizontal");
-                        }
-                    });
-
-                document.getElementsByClassName("section-"+title.toLowerCase())[0].classList.add("show_horizontal");
-                title==="Skills" ? 
-                    document.querySelector(".section-skills__carousel-row").classList.contains("table-active") ?
-                        null
-                        :
-                        setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.add("carousel-active")},500)
-                    :
-                    setTimeout(()=>{document.querySelector(".section-skills__carousel-row").classList.remove("carousel-active")},500);
-            }
-
-            //CAROUSEL TOGGLE FUNCTIONS
-            const ToggleButtons = document.getElementsByClassName("btn-toggle");
-            const Carousel = document.getElementsByClassName("section-skills__carousel-row")[0];
-            [...ToggleButtons].forEach(ToggleButton=>ToggleButton.addEventListener("click",ButtonClickHandler));
-
-            function ButtonClickHandler() {
-                if(this.classList.contains("carousel")){
-                    if(!Carousel.classList.contains("carousel-active")){
-                        Carousel.classList.add("carousel-active");
-                        Carousel.classList.remove("table-active");
-                    } 
-                } else if(this.classList.contains("table")){
-                    if(!Carousel.classList.contains("table-active")){
-                        Carousel.classList.add("table-active");
-                        Carousel.classList.remove("carousel-active");                        
-                    }
-                }
-            }
-            //IMAGE GALLERY FOR PROJECTS
-            const IMGs = document.querySelectorAll(".img_container");
-            const preChoice_title = document.querySelector(".preChoice");
-            [...IMGs].forEach(IMG=>IMG.addEventListener("click",IMGClickListener));
-            [...IMGs].forEach(IMG=>IMG.addEventListener("mouseover",IMGMouseOverListener));
-            [...IMGs].forEach(IMG=>IMG.addEventListener("mouseout",IMGMouseOutListener));
-
-            function IMGClickListener(){
-
-            }
-
-            function IMGMouseOverListener(){
-                const projectName = this.dataset.project;
-                preChoice_title.textContent = projectName;
-                this.style.cursor = "pointer"
-                this.style.opacity = 1;
-                preChoice_title.classList.remove("out");
-                preChoice_title.classList.add("in");
-            }
-
-            function IMGMouseOutListener(){
-                this.style.opacity = 0.7;
-                this.style.cursor = "pointer"
-                preChoice_title.classList.remove("in");
-                preChoice_title.classList.add("out");
-                setTimeout(()=>preChoice_title.classList.remove("out"),250);
-            }
-            
-            const NavBar = document.querySelector(".section-head__nav");
-
-
-        </script>       
+        <script src="./Assets/js/functional.js"></script>       
     </body>
 </html>

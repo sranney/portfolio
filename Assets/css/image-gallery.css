@@ -49,6 +49,8 @@
 }            
 .image-gallery .img_container:hover {
     transform: translateY(-30%);
+    cursor : pointer;
+    opacity : 1;    
     margin:15px;
 }
 .image-gallery .img_container.focused:hover {
@@ -109,4 +111,8 @@ p[class^="caption-"] {
 .preChoice.out {
     opacity:0;
     transform:translateX(200%);
+}
+
+.img_container.chosen{
+    opacity:1 !important;
 }

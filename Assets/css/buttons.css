@@ -11,3 +11,43 @@
     color: #64b5f6;
     text-shadow: 0rem 0rem 2rem rgba(100,181,246,0.4)
 }
+
+.btn.btn-circle{
+    background-color: rgb(55,71,79);
+    color:white;
+    float:right;
+    border-radius:50%;
+    font-size:4rem;
+    padding:0px 10px;
+    transition: all 0.4s;
+}
+
+.btn.btn-circle:hover {
+    background-color:#64b5f6;
+    transform: scale(1.4);
+    text-shadow: 0rem 0rem 4rem white;
+}
+
+.btn.btn-circle:hover .tooltip-content{
+    transform: scale(calc(1/1.4));
+}
+
+.featured-project-button{
+    margin:1rem 0;
+    background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    font-size:2rem;
+    padding:3rem;
+    border-radius:15px;
+    text-decoration:none;
+    text-transform: uppercase;
+    color:white;
+    width:38%;
+}
+
+.featured-project-button:hover{
+    color:#64b5f6;
+    background-image: linear-gradient(to right bottom,rgba(55,71,79,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);    
+}

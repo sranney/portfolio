@@ -11,6 +11,7 @@
     animation-fill-mode:forwards;
     animation-duration: 2s;
     animation-name:top_bottom;
+    animation-delay: 1s;
 }
 
 .section-head__profession {
@@ -18,6 +19,8 @@
     position:absolute;
     top:90%;
     left:50%;
+    opacity:0;
+    animation-delay: 1s;
     transform: translate(-50%,-50%) scale(0.9);   
     font-size: 4rem; 
     text-shadow: 0rem 0rem 1rem rgba(0,0,0,0.8);
@@ -61,4 +64,52 @@
 
 .heading-sub:hover {
     text-shadow: 0rem 0rem 3rem rgba(0,0,0,.3);
+}
+
+.featured-project-title{
+    background-image:linear-gradient(to right,#64b5f6,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing:5px;
+    transition:all 0.2s;
+    text-transform:uppercase;
+    text-shadow: 0rem 0rem 1.5rem rgba(0,0,0,.3);
+    font-size: 6rem;  
+    margin:4rem 0;
+}
+
+.featured-project-title:hover {
+    transform: rotateX(10deg) rotateY(25deg) skewX(5deg) scale(1.01);
+    text-shadow: 0rem 0rem 3rem rgba(0,0,0,.6);
+}
+
+.heading-sub__role-list {
+    font-size:3rem;
+    text-transform:uppercase;
+    font-weight:300;
+    display:inline-block;
+    background-image:linear-gradient(to right,#64b5f6,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing:5px;
+    transition:all 0.5s;    
+}
+
+.heading-sub__role {
+    font-size:3rem;
+    text-transform:uppercase;
+    font-weight:300;
+    display:inline-block;
+    background-image:linear-gradient(to right,#64b5f6,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing:5px;
+    transition:all 0.5s;    
+}
+
+.heading-sub__role:hover {
+    transform: scale(1.10);
 }

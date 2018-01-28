@@ -26,13 +26,13 @@
 }
 
 .table-active .skill_box {
-    background-color:rgba(207,216,220,0.8);
+    background-color:rgba(255,255,255,0.8);
     margin:1%;
 }
 
-.skill_box:hover {
+.table-active .skill_box:hover {
     transform: scale(1.09);
-    background-color:rgba(207,216,220,1);
+    background-color:rgba(255,255,255,1);
 }
 
 .section-skills__carousel-row div{

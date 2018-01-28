@@ -13,6 +13,7 @@ $color-primary-dark: #37474f; */
 @import url("buttons.css");
 @import url("image-gallery.css");
 @import url("navigation.css");
+@import url("project-sheets.css");
 
 @import url("about.css");
 @import url("skills.css");
