@@ -1,3 +1,4 @@
+/* parent div for tooltips */
 .tooltip {
     position: relative;
 }
@@ -14,6 +15,18 @@
     overflow-y:hidden;
 }
 
+/* right tooltip */
+.tooltip .tooltip-content.tooltip-content-right {
+    left: 130%;
+    top: 0%;
+    width: 200px;
+    background-color: rgb(55,71,79);    
+}
+
+.tooltip:hover .tooltip-content.tooltip-content-right {
+    visibility:visible;
+}
+
 /* left tooltip */
 .tooltip .tooltip-content.tooltip-content-left {
     right: 130%;
@@ -26,6 +39,7 @@
     visibility:visible;
 }
 
+/* top tooltip */
 .tooltip .tooltip-content.tooltip-content-top {
     left:-50%;
     top: -50%;
@@ -39,24 +53,7 @@
     visibility:visible;
 }
 
-.tooltip .listen {
-    position: absolute;
-    top:5%;
-    left:95%;
-    opacity:1;
-    font-size: 5rem;
-    transition: all 0.5s;
-    /* animation-fill-mode: forwards;
-    animation-delay: 3s;
-    animation-duration: 0.5s;
-    animation-name: fadeIn; */
-}
-
-.tooltip:hover .listen {
-    color: rgb(219,34,51);
-    transform: scale(1.1);
-    text-shadow: 0rem 0rem 3rem rgba(219,34,51,0.8);
-}
+/* bottom tooltip */
 
 .tooltip .tooltip-content.tooltip-content-bottom {
     left:0%;
@@ -69,3 +66,22 @@
 .tooltip:hover .tooltip-content.tooltip-content-bottom{
     visibility:visible;
 }
+/* custom
+.tooltip .listen {
+    position: absolute;
+    top:5%;
+    left:95%;
+    opacity:1;
+    font-size: 5rem;
+    transition: all 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+}
+
+.tooltip:hover .listen {
+    color: rgb(219,34,51);
+    transform: scale(1.1);
+    text-shadow: 0rem 0rem 3rem rgba(219,34,51,0.8);
+} */

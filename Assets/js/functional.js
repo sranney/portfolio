@@ -106,20 +106,15 @@ function IMGClickListener(){
 }
 
 function IMGMouseOverListener(){
-    const chosen = [...IMGs].filter(IMG=>IMG.classList.contains("chosen"));
-    if(chosen.length === 0){
-        const projectName = this.dataset.project;
-        preChoice_title.textContent = projectName;
-        preChoice_title.classList.remove("out");
-        preChoice_title.classList.add("in");
-    }
+    const projectName = this.dataset.project;
+    preChoice_title.textContent = projectName;
+    preChoice_title.classList.remove("out");
+    preChoice_title.classList.add("in");
 }
 
 function IMGMouseOutListener(){
-    if(!this.classList.contains("chosen")){
-        preChoice_title.classList.remove("in");
-        preChoice_title.classList.add("out");
-        setTimeout(()=>preChoice_title.classList.remove("out"),250);
-    }
+    preChoice_title.classList.remove("in");
+    preChoice_title.classList.add("out");
+    setTimeout(()=>preChoice_title.classList.remove("out"),250);
 }
 

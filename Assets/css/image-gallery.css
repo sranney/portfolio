@@ -115,4 +115,8 @@ p[class^="caption-"] {
 
 .img_container.chosen{
     opacity:1 !important;
+    transform: translateY(-30%);
+    cursor : pointer;
+    opacity : 1;    
+    margin: 15px;    
 }

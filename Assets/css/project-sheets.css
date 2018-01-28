@@ -63,6 +63,8 @@
 
 .featured-project-descr{
     font-size: 2rem;
+    width:90%;
+    margin:0 auto;
     color: rgb(55,71,79)
 }
 
