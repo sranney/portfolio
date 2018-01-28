@@ -3,3 +3,25 @@
     align-content:left;
     color: #607d8b;
 }
+
+.quote {
+    align-content:left;
+    font-size:3.1rem;
+    font-weight:700;
+    transform: skewX(-10deg);
+    color:#2D4861;
+    margin-bottom:2.4rem;
+}
+
+.quote-marker {
+    margin-right:1.6rem;
+    font-size: 15rem;
+    float:left;
+    background-image:linear-gradient(to left top,rgba(0,119,181,0.5),rgba(55,71,79,0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

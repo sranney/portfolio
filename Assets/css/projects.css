@@ -15,6 +15,10 @@
     overflow-x:hidden;
 }
 
+.section-projects .heading-main {
+    margin-top: 0px;
+}
+
 .section-projects p{
     text-align: left;
     margin: 25px;

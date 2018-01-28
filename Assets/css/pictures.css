@@ -3,3 +3,17 @@
     width:30%;
     float:left;
 }
+
+.featured-project-tech-pic {
+    height:2.5rem;
+    transform: translateY(30%);
+    margin-right: 1rem;
+}
+
+.recommendation-pic {
+    float:left;
+    height: 4.9rem;
+    border-radius: 50%;
+    margin-right:5.6rem;
+    transition: all 0.5s;
+}

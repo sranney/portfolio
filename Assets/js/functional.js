@@ -42,7 +42,7 @@ function NavClickHandler (){
     
     const ActiveSection = document.getElementsByClassName(`section-${title}`)[0];
     ActiveSection.classList.add("show_horizontal");
-    ActiveSection.scrollIntoView(true);
+    window.scrollY>550 ? ActiveSection.scrollIntoView(true) : null;
     title==="skills" ? 
         document.querySelector(".section-skills__carousel-row").classList.contains("table-active") ?
             null

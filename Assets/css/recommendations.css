@@ -1,0 +1,55 @@
+.section-recommendations{
+    position:absolute;
+    background-color:white;
+    top: 83vh;
+    margin:2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-150%);
+    box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
+    transition: all 1.5s;
+    z-index: 100;
+    padding:3rem;
+    background-image: linear-gradient(to right bottom,rgba(45,72,97,.5) 0%,rgba(55,71,79,.5) 70%,#64b5f6 100%),url(../images/cover.jpeg);
+    background-size:initial;
+}
+
+.section-recommendations .heading-main {
+    color: #fdd835;
+}
+
+.section-recommendations p{
+    text-align: left;
+}
+
+.recommendation-card{
+    border-radius: 10px;
+    width:80%;
+    margin:5rem auto;
+    transition: all 0.5s;
+    padding:3rem;
+    box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.3);
+    background-color:white;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0rem 0rem 3rem rgba(0,0,0,0.3);
+}
+
+.recommendation-card:hover .recommendation-pic{
+    transform: scale(1.2);
+}
+
+.profile .name {
+    font-size: 2rem;
+    transform: translateY(80%);
+    font-weight: 700;
+    text-decoration:underline;
+}
+
+.profile::after {
+    content: "";
+    clear: both;
+    display:block;
+}
