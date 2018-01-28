@@ -1,7 +1,15 @@
 .section-head__nav{
     position:absolute;
     top:90%;
+    width:100%;
+}
+
+.section-head__nav.fixed {
     width:97.35%;
+    position:fixed;
+    background-image:linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url("../images/cover.jpeg");
+    background-size:initial;
+    top:0;   
 }
 
 .section-head__nav-item{
@@ -58,4 +66,5 @@
     background-color: rgba(55,71,79,.7);
     background-image: linear-gradient(90deg, rgba(55,71,79,.7) 0%, rgba(55,71,79,.7) 50%, rgba(55,71,79,.7) 50%)
 }
+
 

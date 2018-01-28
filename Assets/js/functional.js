@@ -6,16 +6,9 @@ const NavBar = document.querySelector(".section-head__nav");
 ScrollHandler = (e)=>{
     console.log(window.scrollY);
     if(window.scrollY>550){
-        NavBar.style.position="fixed";
-        NavBar.style.backgroundImage="linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(./Assets/images/cover.jpeg)";
-        NavBar.style.backgroundSize="initial";
-        NavBar.style.top=0;
-       
+        NavBar.classList.add("fixed");
     } else if(window.scrollY<550){
-        NavBar.style.position="absolute";
-        NavBar.style.top= "90%";
-
-        NavBar.style.backgroundImage="none";
+        NavBar.classList.remove("fixed");
     }
 };
 //run this immediately to determine how to modify the navbar - this will allow for the navbar to appear appropriately when the page is below a certain height
