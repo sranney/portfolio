@@ -25,6 +25,7 @@ app.get("/",(req,res)=>{
 
 //send email
 app.post("/sendInvite",(req,res) => {
+    console.log(req.body);
     const msgSubj = `Connection - ${req.body.name}`;
     const msgBody = `${req.body.name} at ${req.body.email} wants to connect with you.<br>Here is their message: ${req.body.message}`;
     
