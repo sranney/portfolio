@@ -12,7 +12,6 @@ $color-primary-dark: #37474f; */
 
 @import url("header.css");
 @import url("titles.css");
-@import url("footer.css");
 @import url("pictures.css");
 
 @import url("content.css");
