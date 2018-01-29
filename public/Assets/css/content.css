@@ -15,7 +15,7 @@
 
 .quote-marker {
     margin-right:1.6rem;
-    font-size: 15rem;
+    font-size: 15rem !important;
     float:left;
     background-image:linear-gradient(to left top,rgba(0,119,181,0.5),rgba(55,71,79,0.5));
     -webkit-background-clip: text;
