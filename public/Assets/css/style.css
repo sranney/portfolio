@@ -2,6 +2,8 @@
 $color-primary-light:#64b5f6;
 $color-primary-dark: #37474f; */
 
+@import url("cover.css");
+
 @import url("about.css");
 @import url("skills.css");
 @import url("projects.css");
@@ -10,7 +12,6 @@ $color-primary-dark: #37474f; */
 
 @import url("header.css");
 @import url("titles.css");
-@import url("footer.css");
 @import url("pictures.css");
 
 @import url("content.css");
@@ -33,6 +34,10 @@ html {
 body {
     margin:20px;
     position: relative;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;    
 }
 
 body::-webkit-scrollbar-track

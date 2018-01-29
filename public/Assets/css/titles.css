@@ -130,3 +130,17 @@
     margin:0px;
     width:max-content;
 }
+
+.content_title{
+    font-size:4rem;
+    text-align:center;
+    background-image:linear-gradient(to left top,rgb(0,119,181),rgb(55,71,79));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    text-transform: uppercase;   
+}
+
+.section-contact__column:first-child.content_title{
+    margin-top:2rem;
+}

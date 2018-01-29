@@ -1,0 +1,30 @@
+.cover.active {
+    position:absolute;
+    background-color:white;
+    top: 70vh;
+    left:0%;
+    height:200vh;
+    width:102%;
+    z-index:10000;
+    margin-left:-20px;
+    animation-delay:3.5s;
+    animation-fill-mode:forwards;
+    animation-name: reveal;
+    animation-duration:0.5s;
+}
+
+@keyframes reveal {
+    0% {
+        top:70vh;
+        opacity:1;
+    }
+    80% {
+        top:80vh;
+        opacity:1;
+    }
+    100%{
+        top:80vh;
+        opacity:0;        
+        display:none;
+    }    
+}
