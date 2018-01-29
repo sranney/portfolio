@@ -2,6 +2,14 @@
 $color-primary-light:#64b5f6;
 $color-primary-dark: #37474f; */
 
+@import url("animations.css");
+
+@import url("about.css");
+@import url("skills.css");
+@import url("projects.css");
+@import url("recommendations.css");
+@import url("contact.css");
+
 @import url("header.css");
 @import url("titles.css");
 @import url("footer.css");
@@ -17,13 +25,7 @@ $color-primary-dark: #37474f; */
 @import url("email-form.css");
 @import url("success-overlay.css");
 
-@import url("about.css");
-@import url("skills.css");
-@import url("projects.css");
-@import url("recommendations.css");
-@import url("contact.css");
 
-@import url("animations.css");
 
 html {
     font-size:62.5%;
