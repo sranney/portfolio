@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // using SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
 const sgMail = require('@sendgrid/mail');
-const sendgridAPIKEY = require("../bootcamp_sar/secrets/developer_sendgridkey");
-const APIKey = process.env.SENDGRID_API_KEY || sendgridAPIKEY;
+// const sendgridAPIKEY = require("../bootcamp_sar/secrets/developer_sendgridkey");
+// const APIKey = process.env.SENDGRID_API_KEY || sendgridAPIKEY;
+
+const APIKey = process.env.SENDGRID_API_KEY;
 
 sgMail.setApiKey(APIKey);
 
