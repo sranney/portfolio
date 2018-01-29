@@ -17,3 +17,20 @@
     margin-right:5.6rem;
     transition: all 0.5s;
 }
+
+.business-card {
+    position:absolute;
+    display:none;
+    top:0%;
+    width:100%;
+    transform: translateX(150%);
+    opacity: 0;
+}
+
+.business-card.show-contact{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    transform: translateX(0%);
+    opacity: 1;
+}

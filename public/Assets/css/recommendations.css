@@ -41,10 +41,14 @@
     transform: scale(1.2);
 }
 
+
 .profile .name {
     font-size: 2rem;
     transform: translateY(80%);
     font-weight: 700;
+}
+
+.recommendation-card:hover .name {
     text-decoration:underline;
 }
 

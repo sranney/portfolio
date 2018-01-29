@@ -51,3 +51,26 @@
     color:#64b5f6;
     background-image: linear-gradient(to right bottom,rgba(55,71,79,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);    
 }
+
+.form-button {
+    text-align: center;
+    padding:3rem 0rem;
+    font-size:5rem;
+    border-radius:15px;
+    width:100%;
+    background-color:transparent;
+    background-image:linear-gradient(to right,rgba(55,71,79,.7),rgba(55,71,79,.7));
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    color: #fdd835;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    outline:none;
+    border:none;
+}
+
+.form-button:hover{
+    background-image:linear-gradient(to right,rgba(100,181,246,0.5),rgba(100,181,246,0.5)),url(../images/cover.jpeg);
+    transform: scale(1.02);
+}

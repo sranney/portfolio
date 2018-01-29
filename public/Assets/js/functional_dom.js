@@ -4,7 +4,6 @@ const NavBar = document.querySelector(".section-head__nav");
 //ScrollHandler handles whether the navbar needs to be separated from the rest of the page and put as a fixed navbar at the top
 //this depends on where the scrollbar is currently
 ScrollHandler = (e)=>{
-    console.log(window.scrollY);
     if(window.scrollY>550){
         NavBar.classList.add("fixed");
     } else if(window.scrollY<550){
@@ -110,4 +109,27 @@ function IMGMouseOutListener(){
     preChoice_title.classList.add("out");
     setTimeout(()=>preChoice_title.classList.remove("out"),250);
 }
+
+const EmailBtn = document.querySelector(".social_links-point.social_links-email");
+const BizCardBtn = document.querySelector(".social_links-point.social_links-business-card");
+const Emailer = document.querySelector(".email-form");
+const BusinessCard = document.querySelector(".business-card");
+
+function ToggleEmailContact(){
+    if(!Emailer.classList.contains("show-contact")){
+        Emailer.classList.add("show-contact");
+        BusinessCard.classList.remove("show-contact");
+    }
+}
+
+EmailBtn.addEventListener("click",ToggleEmailContact);
+
+function ToggleBizCardContact(){
+    if(!BusinessCard.classList.contains("show-contact")){
+        BusinessCard.classList.add("show-contact");
+        Emailer.classList.remove("show-contact");
+    }
+}
+
+BizCardBtn.addEventListener("click",ToggleBizCardContact);
 

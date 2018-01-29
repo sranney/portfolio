@@ -1,0 +1,15 @@
+.success-overlay{
+    position:absolute;
+    top:0%;
+    left:0%;
+    background:linear-gradient(to right bottom, #64b5f6,#37474f);
+    display:none;
+    z-index:10000;
+    text-align: center;
+}
+
+.popup{
+    width:100%;
+    height:100%;    
+    display:block;
+}

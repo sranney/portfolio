@@ -1,0 +1,82 @@
+.form-group {
+    margin:1rem 0rem;
+}
+
+.form-user-input {
+    padding:1.5rem;
+    width:100%;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    font-size: 2rem;
+    font-family: "Roboto Slab",serif;    
+}
+
+.form-user-input {
+    border-bottom: 3px solid transparent;
+    padding: 1rem;
+    transition: all 0.3s;
+    background-color:rgba(255,255,255,1);
+}
+
+.form-user-input:placeholder-shown {
+    background-color:rgba(255,255,255,0.5);
+}
+
+.form-user-input:focus {
+    background-color:rgba(255,255,255,1);
+    border-bottom: 3px solid rgb(100,181,246);
+    outline:none;
+}
+
+.form-user-input:focus:invalid {
+    border-bottom: 3px solid rgb(219,34,51);
+}
+
+.form-user-input::-webkit-input-placeholder {
+    font-size: 2rem;
+    font-family: "Roboto Slab",serif;
+}
+
+.form-user-input + label {
+    margin: 1rem;
+    font-size: 1.2rem;
+
+    display: block;
+    transition: all 0.3s;
+}
+
+.form-user-input:placeholder-shown + label {
+    transform: translateY(-3rem);
+    font-size: 2rem;
+    opacity:0;
+}
+
+#message {
+    height:15rem;
+}
+
+#message + label {
+    margin: 1rem;
+
+    display: block;
+    transition: all 0.3s;
+}
+
+#message:placeholder-shown + label {
+    transform: translateY(-16rem);
+    margin-bottom:1rem;
+    font-size: 2rem;
+    opacity:0;
+}
+
+.email-form{
+    transform: translateX(150%);
+    opacity: 0;
+    width: 0%;
+}
+
+.email-form.show-contact{
+    width:100%;
+    opacity:1;
+    transform: translateX(0%);   
+}

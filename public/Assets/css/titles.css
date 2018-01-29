@@ -114,3 +114,19 @@
 .heading-sub__role:hover {
     transform: scale(1.10);
 }
+
+
+.success-message {
+    font-size:4rem;
+    color:white;
+    text-transform: uppercase;
+    position:absolute;
+    top:25%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80% !important;
+    padding:0px;
+    margin:0px;
+    width:max-content;
+}

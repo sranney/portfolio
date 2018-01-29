@@ -56,9 +56,10 @@
 /* bottom tooltip */
 
 .tooltip .tooltip-content.tooltip-content-bottom {
-    left:0%;
+    left:-30%;
     top: 120%;
-    width:100%;
+    width:140%;
+    text-align:center;
     background-color: rgb(55,71,79);
     opacity: 1;  
 }

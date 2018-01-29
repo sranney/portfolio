@@ -8,7 +8,8 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
         
         <link rel="stylesheet" href="./Assets/css/reset.css">
-        <link rel="stylesheet" href="./Assets/css/style.css">        
+        <link rel="stylesheet" href="./Assets/css/style.css">
+        
         
         <title>Spencer Ranney - Developer</title>   
     </head>
@@ -361,8 +362,104 @@
                     <p class="quote">Spencer is a joy to work with.</p> 
                     <p class="word-content">Spencer is a joy to work with. He handled every project assigned to him with aplomb and diligence, displaying the ability to follow creative direction while adding his own creative input in a diplomatic and useful way. To say he’s a team leader would be an understatement. Spencer would be an asset to have on any team. It is an honor for me to recommend him.</p>
                 </div>                              
-            </section>            
+            </section>       
+            <section class="section-contact">
+                <div class="success-overlay">
+                    <p class="success-message">Thank you for reaching out to me! I'll be in touch soon.</p>
+                </div>
+                <h2 class="heading-main">
+                    Contact Me
+                </h2>
+                <div class="section-contact__content">
+                    <div class="section-contact__column">
+                        <div class="word-content">
+                            This site was built by me, Spencer Ranney, using HTML, CSS, JavaScript, AJAX, Node.js, Express.js, and SendGrid. I built all the CSS and JavaScript interactivity from scratch. If you like the design of the site, I would enjoy connecting with you! Write me an email or feel free to connect with me on GitHub or LinkedIn. See my business card for additional contact methods.
+                        </div>
+                        <hr>
+                        <div class="content_title">
+                            Connect
+                        </div>
+                        <hr>
+                        <div class="social_links">
+                            <a 
+                                target="_blank" 
+                                href="https://www.linkedin.com/in/spencer-ranney/" 
+                                class="tooltip social_links-point social_links-linkedin"
+                            >
+                                <i class="ti-linkedin"></i>
+                                <span class="tooltip-content tooltip-content-bottom">
+                                    LinkedIn
+                                </span>                                 
+                            </a>
+                            <a 
+                                target="_blank" 
+                                href="https://github.com/sranney" 
+                                class="tooltip social_links-point social_links-github"
+                            >
+                                <i class="ti-github"></i>
+                                <span class="tooltip-content tooltip-content-bottom">
+                                    GitHub
+                                </span>                                 
+                            </a>
+                            <div
+                                class="tooltip social_links-point social_links-email"
+                            >
+                                <i class="ti-email"></i>
+                                <span class="tooltip-content tooltip-content-bottom">
+                                    Email
+                                </span>  
+                            </div>
+                            <div
+                                class="tooltip social_links-point social_links-business-card"
+                            >
+                                <i class="fa fa-id-card"></i>
+                                <span class="tooltip-content tooltip-content-bottom">
+                                    Business Card
+                                </span>  
+                            </div>                                                      
+                            <a 
+                                target="_blank" 
+                                href="./Assets/SpencerRanney_Resume.pdf" 
+                                class="tooltip social_links-point social_links-resume"
+                                download
+                            >
+                                <i class="ti-file"></i>
+                                <span class="tooltip-content tooltip-content-bottom">
+                                    Resume
+                                </span>                                
+                            </a>
+                        </div>                                                                                                                                           
+                    </div> 
+                    <div class="section-contact__column">
+                        <div  class="business-card show-contact">
+                            <img src="./Assets/images/business-card.PNG" />
+                        </div>
+                        <form class="email-form">
+                            <div class="form-group">
+                                <input type="text" class="form-user-input" id="name" name="name" placeholder="Name" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-user-input" id="email" name="email" placeholder="Email" required>                                
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-user-input" id="message" name="message" placeholder="Message" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button class="form-button">
+                                Send <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>                
+                </div>
+            </section>
         </main>
-        <script src="./Assets/js/functional.js"></script>       
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="./Assets/js/functional_dom.js"></script>
+        <script src="./Assets/js/functional_emails.js"></script> 
     </body>
 </html>
