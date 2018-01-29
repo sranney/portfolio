@@ -17,6 +17,7 @@ window.addEventListener("scroll",ScrollHandler)
 
 //SHOWING ABOUT PAGE ON PAGE LOAD
 setTimeout(() => {
+    document.querySelector(".cover.active").classList.remove("active");
     document.getElementById("about").classList.add("active");
     document.getElementsByClassName("section-about")[0].classList.add("show_horizontal");
 },4500);
