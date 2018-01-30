@@ -28,12 +28,13 @@ const Sections = document.querySelectorAll("section");
 
 [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",NavClickHandler));
 
-function NavClickHandler (){
+function NavClickHandler (id){
+    const clickedItem = document.getElementById(id) || this;
     [...NavItems].forEach(NavItem=>{
         NavItem.classList.remove("active");
     })
-    this.classList.add("active");
-    const title = this.getAttribute("id");
+    clickedItem.classList.add("active");
+    const title = clickedItem.getAttribute("id");
     [...Sections].forEach(Section=>{
             if(Section.getAttribute("id") !== title){
                 Section.classList.remove("show_horizontal");//
@@ -134,8 +135,11 @@ function ToggleBizCardContact(){
 
 BizCardBtn.addEventListener("click",ToggleBizCardContact);
 
-const AboutNavs = document.querySelectorAll("p span");
+const AboutNavs = document.querySelectorAll("p span[class^='about-'][class$='-nav']");
 
-// function AboutNavigation(){
-//     if(this.classList.)
-// }
+function AboutNavigation(){
+    const page = this.classList[0].replace("about-","").replace("-nav","");
+    NavClickHandler (page)    
+}
+
+AboutNavs.forEach(AboutNav=>AboutNav.addEventListener("click",AboutNavigation));

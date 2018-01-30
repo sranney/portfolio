@@ -34,7 +34,7 @@ app.get("/",(req,res)=>{
 app.post("/sendMessage",(req,res) => {
     console.log(req.body);
     const msgSubj = `Connection - ${req.body.name}`;
-    const msgBody = `${req.body.name} at ${req.body.email} wants to connect with you.<br>Here is their message: ${req.body.message}`;
+    const msgBody = `${req.body.name} at ${req.body.email} wants to connect with you.<br>Here is their message:<br>${req.body.message}`;
     
     const msg = {
     to: 'spencerranney@gmail.com',
@@ -43,6 +43,7 @@ app.post("/sendMessage",(req,res) => {
     subject: msgSubj,
     html: msgBody,
     };
+    console.log(msg);
     sgMail.send(msg).catch(err=>console.log(err));
     
     res.send(req.body.name);
