@@ -134,3 +134,8 @@ function ToggleBizCardContact(){
 
 BizCardBtn.addEventListener("click",ToggleBizCardContact);
 
+const AboutNavs = document.querySelectorAll("p span");
+
+// function AboutNavigation(){
+//     if(this.classList.)
+// }

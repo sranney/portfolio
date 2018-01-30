@@ -16,7 +16,17 @@
     margin: 25px;
 }
 
-.section-about p:last-child{
-    padding: 15px;
+p span[class^="about-"][class$="-nav"]{
+    text-decoration: underline;
+    font-weight: 700;
 }
 
+p span[class^="about-"][class$="-nav"]:hover {
+    cursor:pointer;
+    text-transform:uppercase;
+    transform: scale(3);
+    color:transparent;
+    background-image: linear-gradient(to right,#0091ea,#37474f);
+    -webkit-background-clip: text;
+    background-clip: text;
+}

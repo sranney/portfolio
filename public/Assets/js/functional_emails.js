@@ -17,7 +17,7 @@ function SendEmail(event) {
     //only accept if there are entries for each of these fields
     if(name.length !== 0 && email.length !== 0 && message.length !== 0){
         //post request to the server that will send email information
-        $.post( "/sendInvite", {name,email,message})
+        $.post( "/sendMessage", {name,email,message})
         .done((data)=>{//show overlay that will take user thanks for connecting
             SuccessOverlay.classList.add("popup");
             SuccessMessage.textContent = `Thank you for reaching out to me, ${data}! I'll be in touch soon.`;

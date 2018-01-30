@@ -12,21 +12,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // using SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
 const sgMail = require('@sendgrid/mail');
-// const sendgridAPIKEY = require("../bootcamp_sar/secrets/developer_sendgridkey");
-// const APIKey = process.env.SENDGRID_API_KEY || sendgridAPIKEY;
-
-const APIKey = process.env.SENDGRID_API_KEY;
+const APIKey = process.env.SENDGRID_API_KEY || require("../bootcamp_sar/secrets/developer_sendgridkey");
 
 sgMail.setApiKey(APIKey);
 
-require("./routes/routes.js")(app,sgMail);
+
+//create a port variable
+const port = process.env.PORT||5000;
+//set up server to listen on port
+var server = require("http").createServer(app);
+
+//listening on port 5000
+server.listen(port);
+
 
 app.get("/",(req,res)=>{
     res.sendFile("index.html");
 });
 
 //send email
-app.post("/sendInvite",(req,res) => {
+app.post("/sendMessage",(req,res) => {
     console.log(req.body);
     const msgSubj = `Connection - ${req.body.name}`;
     const msgBody = `${req.body.name} at ${req.body.email} wants to connect with you.<br>Here is their message: ${req.body.message}`;
@@ -42,10 +47,5 @@ app.post("/sendInvite",(req,res) => {
     
     res.send(req.body.name);
 })
-
-//create a port variable
-const port = process.env.PORT||5000;
-//set up server to listen on port
-const server = app.listen(port);
 
 
