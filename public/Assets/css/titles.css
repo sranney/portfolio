@@ -6,6 +6,8 @@
     font-weight:700;
     transform: translate(-50%,-50%) scale(0.9);
     font-size: 8rem;
+    width: 100%;
+    text-align: center;
     letter-spacing: 0.3rem;
     text-shadow: 0rem 0rem 2rem rgba(0,0,0,0.8);
     animation-fill-mode:forwards;
@@ -20,6 +22,8 @@
     top:90%;
     left:50%;
     opacity:0;
+    width: 100%;
+    text-align: center;
     animation-delay: 2s;
     transform: translate(-50%,-50%) scale(0.9);   
     font-size: 4rem; 
@@ -29,6 +33,14 @@
     animation-name:bottom_top;    
 }
 
+.section-head__name.hide,
+.section-head__profession.hide {
+    visibility:hidden;
+}
+.section-head__name.shown,
+.section-head__profession.shown {
+    visibility:visible;
+}
 .heading-main {
     margin:5rem 0rem;
     font-size:5rem;
@@ -117,7 +129,7 @@
 
 
 .success-message {
-    font-size:4rem;
+    font-size:3rem;
     color:white;
     text-transform: uppercase;
     position:absolute;
@@ -133,6 +145,7 @@
 
 .content_title{
     font-size:4rem;
+    margin-bottom:3rem;
     text-align:center;
     background-image:linear-gradient(to left top,rgb(0,119,181),rgb(55,71,79));
     -webkit-background-clip: text;
@@ -144,3 +157,21 @@
 .section-contact__column:first-child.content_title{
     margin-top:2rem;
 }
+
+@media (max-width:800px){
+    .section-head__name{
+        font-size:10rem;
+    }
+    .section-head__profession{
+        font-size:6rem;
+    }
+
+    .content-title {
+        margin-bottom:3rem;
+    }
+
+    .heading-main:hover{
+        transform:scale(1.05);
+    }
+}
+

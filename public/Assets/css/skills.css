@@ -2,14 +2,15 @@
     position:absolute;
     background-color:white;
     top: 83vh;
-    margin:2rem;
+    margin-top:2rem;
     text-align: center;
     opacity: 0;
+    width:85vw;
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
     z-index: 10;
-    width: 92%;
+    /* width: 92%; */
     padding: 4rem;
 }
 

@@ -1,19 +1,59 @@
 const NavBar = document.querySelector(".section-head__nav");
+const ExpandBtn = document.querySelector(".section-head__menu-btn");
+const HeaderSection = document.querySelector(".section-head");
+const NavItems = document.getElementsByClassName("section-head__nav-item");
+const Sections = document.querySelectorAll("section");
 
+console.log(HeaderSection);
 //handle what happens when the user scrolls on the page
 //ScrollHandler handles whether the navbar needs to be separated from the rest of the page and put as a fixed navbar at the top
 //this depends on where the scrollbar is currently
 ScrollHandler = (e)=>{
-    if(window.scrollY>550){
-        NavBar.classList.add("fixed");
-    } else if(window.scrollY<550){
+    if(window.scrollY>0.75*window.innerHeight){
+        if(window.innerWidth > 1300){
+            NavBar.classList.add("fixed");
+            NavBar.classList.remove("header-expand");
+        } else {
+            
+            ExpandBtn.querySelector(".expand-nav").classList.add("yellow");
+        }
+    } else if(window.scrollY<0.75*window.innerHeight){
         NavBar.classList.remove("fixed");
+        ExpandBtn.querySelector(".expand-nav").classList.remove("yellow")        
+        if(!ExpandBtn.classList.contains("open")){    
+            document.querySelector(".section-head__name").classList.remove("hide");
+            document.querySelector(".section-head__profession").classList.remove("hide");        
+        }
     }
 };
 //run this immediately to determine how to modify the navbar - this will allow for the navbar to appear appropriately when the page is below a certain height
 ScrollHandler();
 //event handler for when the user scrolls in the page - uses the ScrollHandler function for the callback function
 window.addEventListener("scroll",ScrollHandler)
+
+function ExpandNavBar() {
+    if(!ExpandBtn.classList.contains("open")){
+        NavBar.classList.add("header-expand");
+        ExpandBtn.classList.add("open");
+        window.scrollTo(0, 0);
+        document.querySelector(".section-head__name").classList.remove("shown");
+        document.querySelector(".section-head__profession").classList.remove("shown");         
+        document.querySelector(".section-head__name").classList.add("hide");
+        document.querySelector(".section-head__profession").classList.add("hide");                 
+    } else {
+        if(window.scrollY>0.75*window.innerHeight){
+            window.scrollTo(0, 0);     
+        } else {
+            window.scrollTo(0, 0);
+            document.querySelector(".section-head__name").classList.add("shown");
+            document.querySelector(".section-head__profession").classList.add("shown");        
+            NavBar.classList.remove("header-expand");
+            ExpandBtn.classList.remove("open");
+        }
+    }
+}
+
+ExpandBtn.addEventListener("click",ExpandNavBar);
 
 //SHOWING ABOUT PAGE ON PAGE LOAD
 setTimeout(() => {
@@ -23,8 +63,7 @@ setTimeout(() => {
 },4500);
 
 //NAVIGATION FUNCTIONS
-const NavItems = document.getElementsByClassName("section-head__nav-item");
-const Sections = document.querySelectorAll("section");
+
 
 [...NavItems].forEach(NavItem=>NavItem.addEventListener("click",NavClickHandler));
 

@@ -2,9 +2,10 @@
     position:absolute;
     background-color:white;
     top: 83vh;
-    margin:2rem;
+    margin:2rem auto;
     text-align: center;
     opacity: 0;
+    width:90vw;
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
@@ -16,15 +17,18 @@
     margin: 25px;
 }
 
-p span[class^="about-"][class$="-nav"]{
+[class^="about-"][class$="-nav"],
+a[class^="about-"][class$="-nav"]:visited,
+a[class^="about-"][class$="-nav"]:link{
+    color:inherit;
     text-decoration: underline;
     font-weight: 700;
 }
 
-p span[class^="about-"][class$="-nav"]:hover {
+[class^="about-"][class$="-nav"]:hover,
+a[class^="about-"][class$="-nav"]:hover:visited,
+a[class^="about-"][class$="-nav"]:hover:link {
     cursor:pointer;
-    text-transform:uppercase;
-    transform: scale(3);
     color:transparent;
     background-image: linear-gradient(to right,#0091ea,#37474f);
     -webkit-background-clip: text;

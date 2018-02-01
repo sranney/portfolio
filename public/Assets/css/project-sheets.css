@@ -10,7 +10,7 @@
     position: absolute;
     width: 65%;
     top: 0%;
-    transform: translateX(-100%);
+    transform: translateX(-150%);
     box-shadow: inset 0rem 0rem 2rem rgba(0,0,0,0.5), 0rem 0rem 2rem rgba(0,0,0,0.5);
     transition: all 0.3s;
 }
@@ -72,3 +72,13 @@
       
 }
 
+@media (max-width:800px){
+    .section-projects__sheets {
+        margin-top: 15rem;
+    }    
+    .project-sheet.shown {
+        width:100%;
+        transform: translateX(0%);
+        margin:0;
+    }
+}

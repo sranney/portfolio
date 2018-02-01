@@ -2,14 +2,14 @@
     position:absolute;
     background-color:white;
     top: 83vh;
-    margin:2rem;
+    margin:2rem auto;
     text-align: center;
     opacity: 0;
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
     z-index: 100;
-    width:93%;
+    width:90vw;
     padding:2rem;
     background-image: linear-gradient(to right bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 60%,transparent),url(../images/dallas-skyline.jpg);
     background-position: top;
@@ -97,4 +97,27 @@
 
 .email-form hr {
     margin:2rem 0rem !important;
+}
+
+@media (max-width:800px){
+    
+    .section-contact{
+        margin:0;
+        padding:0rem;
+    }
+    .section-contact__content {
+        display:block;
+        width: 100%;    
+    }  
+
+    .section-contact__column{
+        background-color:transparent;
+        width: 100%;
+        text-align:left;
+    }
+    
+    .section-contact__column:last-child{
+        margin-top: 5rem;
+    }
+
 }

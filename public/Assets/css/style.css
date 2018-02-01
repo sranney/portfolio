@@ -1,8 +1,7 @@
 /* //$color-primary: #0091ea;
 $color-primary-light:#64b5f6;
 $color-primary-dark: #37474f; */
-
-@import url("cover.css");
+@import url("base.css");/*html, body, scrollbar*/
 
 @import url("about.css");
 @import url("skills.css");
@@ -12,8 +11,8 @@ $color-primary-dark: #37474f; */
 
 @import url("header.css");
 @import url("titles.css");
+@import url("cover.css");
 @import url("pictures.css");
-
 @import url("content.css");
 @import url("tooltip.css");
 @import url("carousel.css");
@@ -23,44 +22,6 @@ $color-primary-dark: #37474f; */
 @import url("project-sheets.css");
 @import url("email-form.css");
 @import url("success-overlay.css");
+@import url("menu-btn.css");
 
 @import url("animations.css");
-
-html {
-    font-size:62.5%;
-    font-family: "Roboto Slab",serif;
-}
-
-body {
-    margin:20px;
-    position: relative;
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;    
-}
-
-body::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    background-color: #90a4ae;
-    border:none;
-    transition:background-color,1.5s;
-}
-
-body::-webkit-scrollbar
-{
-    width: 15px;
-    background-color: #90a4ae;
-    border:none;
-    transition:background-color,1.5s;
-}
-
-body::-webkit-scrollbar-thumb
-{
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #37474f;
-    transition:background-color,1.5s
-}

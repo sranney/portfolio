@@ -2,9 +2,11 @@
     position:relative;
     background-image: linear-gradient(to right bottom,rgba(100,181,246,.7),rgba(55,71,79,.7)),url(../images/cover.jpeg);
     background-size: cover;
+    background-position: center;
     height: 80vh;
     color:white;
     z-index:1000;
+    overflow:hidden;
 }
 
 .section-head__contact {

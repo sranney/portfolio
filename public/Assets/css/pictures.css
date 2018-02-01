@@ -27,10 +27,39 @@
     opacity: 0;
 }
 
+.business-card img{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+
+}
+
 .business-card.show-contact{
     display:flex;
     justify-content: center;
     align-content: center;
     transform: translateX(0%);
     opacity: 1;
+}
+
+@media (max-width:1000px){
+    .about-pic{
+        width:65%;
+        margin:2rem auto;
+        float:none;
+    }
+}
+
+@media (max-width:700px){
+    .about-pic{
+        width:100%;
+        margin:2rem auto;
+        float:none;
+    }
+
 }

@@ -1,6 +1,8 @@
 <html>
     <head>
-        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
         <link rel="stylesheet" href="./Assets/css/reset.css">
         <link rel="stylesheet" href="./Assets/css/style.css">
         <link rel="shortcut icon" type="image/png" href="./Assets/images/logo.png">
@@ -28,6 +30,9 @@
                 </div> -->
                 <h1 class="section-head__name">Spencer Ranney</h1>
                 <h2 class="section-head__profession">Full-Stack Web Developer</h2>
+                <div class="section-head__menu-btn">
+                    <div class="expand-nav"></div>
+                </div>
                 <div class="section-head__nav">
                     <div id="about" class="section-head__nav-item">
                         About
@@ -59,16 +64,16 @@
                 </ul><br>
                 <img class="about-pic" src="./Assets/images/me.jpg" alt=""/>
                 <p class="word-content">Hi, my name is Spencer Ranney.  I am a full-stack web developer who lives in Dallas, Texas. Coding, web development, and music are my greatest passions. I love challenging myself in each of these areas. I am currently looking for full-time full-stack JavaScript opportunities. Please find my resume and contact information <span class='about-contact-nav'>here</span>. If you would like to contact me, I would enjoy talking with you!</p>
-                <p class="word-content">Throughout my educational and professional experiences, I have been recognized for my work ethic and my creative problem solving skills, both of which have driven me to great accomplishments. I believe that my talent lies in my work ethic. I work harder than anyone else to achieve my goals. Most recently, I graduated at the top of my cohort at SMU Coding Boot Camp. During my time in the boot camp, I became known as a go-to individual for understanding concepts and debugging code. Before I graduated the program, I was asked to come back as a teaching assistant to help teach students. My instructor Shantanu Kangude recommended me for the position. My passion for web development extends to sharing what I know as I TA for the boot camp and tutor individuals in web development.</p>
+                <p class="word-content">Throughout my educational and professional experiences, I have been recognized for my work ethic and my creative problem solving skills, both of which have driven me to great accomplishments. I believe that my talent lies in my work ethic. I work harder than anyone else to achieve my goals. Most recently, I graduated at the top of my cohort at SMU Coding Boot Camp. During my time in the boot camp, I became known as a go-to individual for understanding concepts and debugging code. Before I graduated the program, I was asked to come back as a teaching assistant to help teach students. My <a class="about-linkedin-nav" href="https://www.linkedin.com/in/skangude/" target="_blank">instructor</a> recommended me for the position. My passion for web development extends to sharing what I know as I support students in the boot camp and tutor individuals in web development.</p>
                 <p class="word-content">I believe that loyalty and respect are the highest currency in the workplace. Respect for both the people I work with, and the work that I do.  I count being able to work on something that I am passionate about as one of the biggest blessings in my life. I always give my best effort to achieve higher quality work than what is expected by the people who hire me. I strive to rise up every work environment that I join by looking for ways that I can use my skills to help my coworkers. At the highest level, work is not an isolated endeavor. Partnering with co-workers to help them achieve their professional goals can only make my work environment better.</p>
                 <p class="word-content">While I find the most enjoyment working in both the front-end and the back-end of web development, my experience and interests lie predominantly server-side.  In 2014, I developed a passion for programming and quantitative financial research, when I learned how to build asset trading algorithms. I have worked in insurance pricing, investment analytics, political analytics, litigation analytics and text analytics. While all my work experiences have trained me to be comfortable in diverse environments with tight deadlines, I wore the most hats in my most recent job. I worked in financial and economic research driven litigation consulting, analytics driven litigation consulting, healthcare analytics, web scraping, SQL development, and VBA software development.</p>
-                <p class="word-content">Please peruse my <span class='about-projects-nav'>projects</span>, review my <span class='about-skills-nav'>skills</span> and <span class='about-recommendations-nav'>recommendations</span> and feel free to <span class='about-contact-nav'>reach out to me</span>!</p>
+                <p class="word-content">Please peruse my <span class='about-projects-nav'>projects</span>, review my <span class='about-skills-nav'>skills</span> and <span class='about-recommendations-nav'>recommendations</span> and feel free to <span class='about-contact-nav'>contact</span> me!</p>
             </section>
             <section class="section-skills">
                 <div class="tooltip btn btn-toggle carousel">
                     <h3>Carousel</h3>
                     <span class="tooltip-content tooltip-content-top">
-                        Click here to view skills as carousel
+                        Click here to view skills as carousel. Hover over the carousel to pause the carousel.
                     </span>
                 </div>
                 <div class="tooltip btn btn-toggle table">
@@ -160,7 +165,7 @@
                             <h3 class="skill_title">Web Speech API</h3>
                         </div>
                         <div class="skill_box">
-                            <i class="skill_box__icon fa fa-map-marker"></i>
+                            <i class="skill_box__icon fa fa-map-marker"></i><br>
                             <h3 class="skill_title">Geolocation</h3>
                         </div>
                         <div class="skill_box">
@@ -178,7 +183,11 @@
                         <div class="skill_box">
                             <i class="skill_box__icon fa fa-paint-brush"></i>
                             <h3 class="skill_title">HTML Canvas</h3>
-                        </div>                                                                    
+                        </div>
+                        <div class="skill_box">
+                            <i class="skill_box__icon icofont icofont-dashboard-web"></i>
+                            <h3 class="skill_title">Charts and Dashboards</h3>
+                        </div>                                                                                          
                     </div>
                 </div>
                 <div class="section-skills-linkedin">
@@ -310,7 +319,7 @@
                         <ul class="featured-project-tech">
                             <li><img class="featured-project-tech-pic" src="./Assets/images/materializecss.png"/>Materialize CSS</li>
                             <li><img class="featured-project-tech-pic" src="./Assets/images/react.png"/>React.js</li>
-                            <li>New York Times API</li>
+                            <li><img class="featured-project-tech-pic" src="./Assets/images/nyt.png"/>New York Times API</li>
                             <li><img class="featured-project-tech-pic" src="./Assets/images/node.svg"/><img class="featured-project-tech-pic" src="./Assets/images/expressjs.png"/>Node.js and Express.js</li>
                             <li><img class="featured-project-tech-pic" src="./Assets/images/mongodb.png"/>MongoDB and Mongoose</li>
                         </ul>
@@ -348,7 +357,7 @@
                 <div class="recommendation-card">
                     <div class="profile">
                         <img class="recommendation-pic" src="./Assets/images/ismael_barba.jpg"/>
-                        <p class="name">Ismael Barba, Web Developer, Classmate at SMU Coding Boot Camp</p>
+                        <p class="name">Ismael Barba, Web Developer</p>
                     </div>
                     <i class="fa fa-quote-left quote-marker"></i>
                     <p class="quote">Spencer is the hardest working person I have ever come across.</p> 
@@ -357,7 +366,7 @@
                 <div class="recommendation-card">
                     <div class="profile">
                         <img class="recommendation-pic" src="./Assets/images/sandra_marquez.jpg"/>
-                        <p class="name">Sandra Marquez, Web Developer, Classmate at SMU Coding Boot Camp</p>
+                        <p class="name">Sandra Marquez, Web Developer</p>
                     </div>
                     <i class="fa fa-quote-left quote-marker"></i>
                     <p class="quote">Spencer is a joy to work with.</p> 
@@ -374,13 +383,12 @@
                 <div class="section-contact__content">
                     <div class="section-contact__column">
                         <div class="word-content">
-                            This site was built by me, Spencer Ranney, using HTML, CSS, JavaScript, AJAX, Node.js, Express.js, and SendGrid. I built all the CSS and JavaScript interactivity from scratch. If you like the design of the site, I would enjoy connecting with you! Write me an email or feel free to connect with me on GitHub or LinkedIn. See my business card for additional contact methods.
+                            This site was built by me, Spencer Ranney, using HTML, CSS, JavaScript and AJAX on the front-end, Node.js and Express.js on the back-end, and SendGrid to send emails from the back-end. I built all the CSS and JavaScript interactivity from scratch. If you like the design of the site, I would enjoy connecting with you! Write me an email or feel free to connect with me on GitHub or LinkedIn. See my business card for additional contact methods.
                         </div>
                         <hr>
                         <div class="content_title">
                             Connect
                         </div>
-                        <hr>
                         <div class="social_links">
                             <a 
                                 target="_blank" 
@@ -430,7 +438,8 @@
                                 </span>                                
                             </a>
                         </div>                                                                                                                                           
-                    </div> 
+                    </div>
+                    <hr>
                     <div class="section-contact__column">
                         <div  class="business-card show-contact">
                             <img src="./Assets/images/business-card.PNG" />
@@ -438,8 +447,7 @@
                         <form class="email-form">
                             <div class="content_title">
                                 Email Me
-                            </div>
-                            <hr>                            
+                            </div>                           
                             <div class="form-group">
                                 <input type="text" class="form-user-input" id="name" name="name" placeholder="Name" required>
                                 <label for="name">Name</label>

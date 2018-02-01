@@ -2,7 +2,7 @@
     position:absolute;
     background-color:white;
     top: 83vh;
-    margin:2rem;
+    margin:2rem auto;
     text-align: center;
     opacity: 0;
     transform: translateX(-150%);
@@ -10,6 +10,7 @@
     transition: all 1.5s;
     z-index: 100;
     padding:3rem;
+    width:90vw;
     background-image: linear-gradient(to right bottom,rgba(45,72,97,.5) 0%,rgba(55,71,79,.5) 70%,#64b5f6 100%),url(../images/cover.jpeg);
     background-size:initial;
 }

@@ -1,0 +1,69 @@
+.section-head__menu-btn {
+    cursor: pointer;
+    position: fixed;
+    display:none;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-name:rotate360;
+    width:5rem;
+    height:5rem;
+    top:4%;
+    right:4%;
+    border-radius:50%;
+    padding:1rem;
+    background-color:rgba(55,71,79,.7); 
+    z-index:1000000;  
+}
+
+.expand-nav,.expand-nav::before,.expand-nav::after {
+    content:" ";
+    position: absolute;
+    background-color: white;
+    border-radius:2px;
+    left:50%;
+    width:4rem;
+    height:0.5rem;
+    font-size:4rem;
+    transform: translate(-50%,-50%);
+}
+
+.expand-nav {
+    top:50%;
+}
+
+.expand-nav::before {
+    top: -145%;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-name:moveUp;
+}
+
+.expand-nav::after {
+    top:245%;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-name:moveDown;    
+}
+
+.section-head__menu-btn:hover {
+    
+    transform:rotateZ(0deg);
+    animation-play-state:paused;
+}
+
+.section-head__menu-btn:hover .expand-nav,
+.section-head__menu-btn:hover .expand-nav::before,
+.section-head__menu-btn:hover .expand-nav::after { 
+    background-color:#fdd835;
+    animation-play-state:paused;
+}
+
+.expand-nav.yellow,.expand-nav.yellow::before,.expand-nav.yellow::after {
+    background-color:#fdd835;
+}
+
+@media (max-width:800px){
+    .section-head__menu-btn{
+        display:block;
+    }
+}
