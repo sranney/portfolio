@@ -54,6 +54,7 @@
 
 .form-button {
     text-align: center;
+    cursor: pointer;
     padding:3rem 0rem;
     font-size:5rem;
     border-radius:15px;
