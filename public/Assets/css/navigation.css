@@ -2,7 +2,7 @@
     position:absolute;
     top:90%;
     width:100%;
-    transition: all 0.5s;
+
 }
 
 .section-head__nav.header-expand{
@@ -78,6 +78,7 @@
 @media (max-width:800px){
     .section-head__nav {
         top:81vh;
+        transition: all 0.5s;        
     }
     .section-head__nav-item{
         font-size:3rem;
