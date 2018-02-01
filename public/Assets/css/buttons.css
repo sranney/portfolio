@@ -63,6 +63,7 @@
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
+    font-family:inherit;
     color: #fdd835;
     text-transform: uppercase;
     transition: all 0.5s;
