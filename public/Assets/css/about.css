@@ -9,6 +9,7 @@
     transform: translateX(-150%);
     box-shadow: 0.2rem 0.5rem 1rem rgba(0,0,0,0.8);
     transition: all 1.5s;
+    padding: 6rem 4rem 4rem 4rem;
     z-index: 100;
 }
 

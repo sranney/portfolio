@@ -11,7 +11,7 @@
     transition: all 1.5s;
     width: 90%;
     z-index: 1;
-    padding:4rem;
+    padding:6rem 4rem 4rem 4rem;
     overflow-x:hidden;
 }
 
