@@ -82,7 +82,7 @@ function NavClickHandler (id){
     
     const ActiveSection = document.getElementsByClassName(`section-${title}`)[0];
     ActiveSection.classList.add("show_horizontal");
-    window.scrollY>550 ? ActiveSection.scrollIntoView({behavior:"smooth",block:"start"}) : null;
+    ActiveSection.scrollIntoView({behavior:"smooth",block:"start"});
     title==="skills" ? 
         document.querySelector(".section-skills__carousel-row").classList.contains("table-active") ?
             null
